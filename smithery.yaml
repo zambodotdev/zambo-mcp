@@ -1,0 +1,7 @@
+startCommand:
+  type: http
+  url: https://zambo.dev/api/mcp
+  
+name: Zambo MCP
+description: 29 AI tools for builders — strategy generation, code audit, lead gen, onchain scoring, credit discovery, identity verification, prompt defense. Zero auth, zero signup. Works in Claude, Cursor, Windsurf, Cline.
+homepage: https://zambo.dev/mcp
