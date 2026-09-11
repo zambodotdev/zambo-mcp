@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zambodotdev/zambo",
+  "title": "Zambo",
+  "description": "Give your AI hands. One URL. Type a job. Get a receipt.",
+  "version": "4.0.0",
+  "websiteUrl": "https://zambo.dev",
+  "repository": {
+    "url": "https://github.com/zambodotdev/zambo-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://zambo.dev/api/mcp"
+    }
+  ]
+}
