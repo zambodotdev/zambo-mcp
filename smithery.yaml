@@ -2,24 +2,18 @@ startCommand:
   type: http
   url: https://zambo.dev/api/mcp
 
-name: Zambo MCP
+name: Zambo
 description: >
-  29 AI tools for builders — strategy generation (ZAMBOT Sparks), code audit (ProvibeCode),
-  lead gen (LeadSignal), onchain wallet scoring (BaseHawk/Criptic), credit discovery (CreditHunt),
-  professional identity (Signal), prompt injection defense (PromptShield), AI model selection
-  (Model Oracle), schema enforcement (StructLock), multi-agent orchestration via Axis MCP,
-  and more. Zero auth, zero signup, zero API key. Works in Claude, Cursor, Windsurf, and Cline.
-  Free tier: 3-10 calls/day per tool. Zambo Pass ($49/mo) unlocks all 40 tools unlimited.
+  Give your AI hands. One URL. Type a job. Get a receipt.
+  Remote MCP at https://zambo.dev/api/mcp for Claude, Grok, Cursor, and ChatGPT.
+  Free to start. No API key.
 
-homepage: https://zambo.dev/mcp
+homepage: https://zambo.dev
 contact: brennanzambo@zambo.dev
 license: Commercial
 tags:
+  - mcp
   - ai
-  - developer-tools
-  - strategy
-  - code-audit
-  - lead-generation
-  - onchain
-  - agents
-  - multi-agent
+  - remote
+  - tools
+  - receipts
