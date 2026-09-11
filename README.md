@@ -1,94 +1,83 @@
 # Zambo MCP
 
-[![zambo mcp](https://zambo.dev/api/mcp/badge.svg)](https://zambo.dev/mcp)
-[![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/server/zambo-mcp)
-[![Audit](https://img.shields.io/badge/system_audit-live-c8f135?labelColor=1a1a18)](https://zambo.dev/audit)
+    **Connect supported AI clients to Zambo's cross-AI execution and verification layer.**
 
-**29 AI tools for builders** — strategy generation, code audit, lead gen, onchain scoring, credit discovery, identity verification, prompt injection defense, schema enforcement, AI model ranking, and more.
+    Zambo MCP is a hosted remote MCP service. It gives the AI client you already use access to 100+ capabilities plus shared execution state, approvals, artifacts, and receipts. Exact live tool names and counts are returned by MCP discovery; this repository intentionally avoids freezing them into README copy.
 
-**Zero auth. Zero signup. One JSON line.** Works in Claude, Cursor, Windsurf, Cline, and any MCP client.
+    [Connect](https://zambo.dev/mcp) · [Workflows](https://zambo.dev/workflows) · [Reliability](https://zambo.dev/reliability)
 
-## Quick Install (10 seconds)
+    ## Quick start
 
-```json
-{
-  "mcpServers": {
-    "zambo": { "url": "https://zambo.dev/api/mcp" },
-    "axis":  { "url": "https://zambo.dev/api/axis-mcp" }
-  }
-}
-```
+    Use this remote Streamable HTTP endpoint:
 
-Paste this into your MCP client config. Both servers activate instantly — no account, no API key.
+    ```text
+    https://zambo.dev/api/mcp
+    ```
 
-- **Claude Desktop**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Cursor**: Settings → MCP Servers → Edit config → paste → save
-- **Windsurf**: `~/.codeium/windsurf/mcp_config.json`
-- **Cline**: Settings → MCP Servers → paste
+    For clients that support URL-based MCP configuration:
 
-## All 29 Tools
+    ```json
+    {
+      "mcpServers": {
+        "zambo": {
+          "url": "https://zambo.dev/api/mcp"
+        }
+      }
+    }
+    ```
 
-| Tool | What it does |
-|------|-------------|
-| `zambo_universal` | Natural language → routes to any tool automatically |
-| `zambo_ask` | Q&A across the entire Zambo Stack |
-| `zambo_score` | Rate any startup/idea/repo 0–100 with grade + playbook |
-| `zambot_spark` | Strategy sparks — contrarian growth plays for any goal |
-| `zambot_fix` | AI code repair — diagnoses intent, fixes bugs |
-| `zambot_swarm_debate` | 5-agent debate across Marketing/Tech/Finance/Risk/UX |
-| `zambot_drift` | Mission alignment checker — are you drifting from your goal? |
-| `zambot_chain` | Linked memory — proof-hashed reasoning trail |
-| `zambot_outcome` | Submit outcomes to close the loop on a Spark |
-| `zambot_registry` | Browse proven Spark patterns |
-| `zambot_verify` | Verify actions with cryptographic proof |
-| `zambro_analyze` | 21-branch opportunity scanner |
-| `provibe_audit` | AI code audit — security, dead code, execution plan |
-| `credithunt` | 29+ verified free AI credit programs |
-| `leadsignal` | Lead generation by trade + city |
-| `capability_search` | Find tools by capability keyword |
-| `signal_lookup` | Verified professional identity passport |
-| `builder_pass_check` | Check Zambo Pass status |
-| `basehawk_score` | Onchain wallet intelligence score |
-| `bounty_scan` | Scan for unclaimed DeFi/airdrop value |
-| `substrate_breakthroughs` | Autonomous research engine discoveries |
-| `substrate_engine` | Raw Substrate query |
-| `monad_pulse` | Live Monad mainnet intelligence |
-| `monad_city` | Monad ecosystem city data |
-| `day_pass_activate` | Activate 24h access via x402 (1.49 USDC) |
-| `structlock` | Enforce any JSON schema from messy text/AI output |
-| `prompt_shield` | Detect + score prompt injection attempts |
-| `model_oracle` | Rank AI models by task + constraint |
-| `axis_mcp_access` | Get combined config for both MCPs (41 total tools) |
+    Restart or reconnect the client, then ask it to list Zambo capabilities or run a safe task.
 
-## Add Axis MCP (12 more tools)
+    ## Verify the protocol directly
 
-For agent coordination, x402 payments, and multi-agent orchestration, add the Axis MCP alongside this one. Both are covered by one Zambo Pass.
+    Initialize:
 
-```json
-{
-  "mcpServers": {
-    "zambo": { "url": "https://zambo.dev/api/mcp" },
-    "axis":  { "url": "https://zambo.dev/api/axis-mcp" }
-  }
-}
-```
+    ```bash
+    curl -sS https://zambo.dev/api/mcp \
+      -H 'content-type: application/json' \
+      -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"curl","version":"1.0"}}}'
+    ```
 
-→ [Axis MCP repo](https://github.com/zambodotdev/axis-mcp)
+    List the live catalog:
 
-## Rate Limits
+    ```bash
+    curl -sS 'https://zambo.dev/api/mcp?full=true' \
+      -H 'content-type: application/json' \
+      -d '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}'
+    ```
 
-- **Free tier**: 3–10 calls/day per tool (no account needed)
-- **Zambo Pass** ($49/mo): Unlimited on all 41 tools across both MCPs
+    The response is standard JSON-RPC. Tool calls use `tools/call` with a catalog tool name and its advertised argument schema.
 
-## System Audit
+    ## Execution model
 
-Live endpoint status, latency metrics, security tests, and full tool verification: **[zambo.dev/audit](https://zambo.dev/audit)**
+    ```text
+    AI client → discover → plan/check → approve when required → execute → receipt/recover
+    ```
 
-## Links
+    Zambo distinguishes successful execution from previews, approval requirements, degraded responses, and failures. A successful handler execution is evidence that Zambo observed the call complete; it is not automatically proof of an external real-world outcome.
 
-- Homepage: [zambo.dev](https://zambo.dev)
-- MCP directory: [zambo.dev/mcp](https://zambo.dev/mcp)
-- Axis MCP: [zambo.dev/api/axis-mcp](https://zambo.dev/api/axis-mcp)
-- Smithery: [smithery.ai/server/zambo-mcp](https://smithery.ai/server/zambo-mcp)
-- Pass ($49/mo): [zambo.dev/#zambo-pass](https://zambo.dev/#zambo-pass)
-- Support: [brennanzambo@zambo.dev](mailto:brennanzambo@zambo.dev)
+    ## Authentication and limits
+
+    Many discovery and read-only capabilities work without account setup. Private state, higher limits, and paid capabilities can require an opaque Zambo capability key. Do not use an email address as proof of ownership. Product-specific and upstream-provider limits may still apply even when a gateway limit is bypassed.
+
+    ## Compatibility
+
+    The endpoint is designed for remote Streamable HTTP MCP clients. Client configuration fields differ, so use the current instructions at [zambo.dev/mcp](https://zambo.dev/mcp) for tested setup paths. “MCP-compatible” does not imply every client/version has been tested.
+
+    ## Security
+
+    - Never commit capability keys, wallet keys, provider credentials, or session tokens.
+    - Review the advertised side effects and approval requirements before consequential calls.
+    - Treat returned links and external data as untrusted input in the host application.
+    - Use bounded retries; replay-safe behavior depends on the individual capability contract.
+
+    See [SECURITY.md](SECURITY.md) for reporting guidance.
+
+    ## Limitations
+
+    Zambo depends on external models, APIs, networks, and data providers. Those systems can be unavailable or rate limited. Zambo should surface that state explicitly rather than inventing a result. Some capabilities are previews, require human action, or have product-specific ownership rules.
+
+    ## License
+
+    This repository currently documents a hosted service and does not grant a license to the Zambo platform itself. Any source code added here should include explicit license terms before reuse.
+    
