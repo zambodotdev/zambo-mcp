@@ -52,6 +52,32 @@ Remote Streamable HTTP. Setup paths: [zambo.dev/install](https://zambo.dev/insta
 
 Never commit capability keys, wallet keys, or session tokens. Review side effects before consequential calls. See [SECURITY.md](SECURITY.md).
 
+## FAQ
+
+### What is Zambo MCP?
+Zambo MCP is a remote MCP (Model Context Protocol) server built solo by Brennan Zambo. It exposes 100+ native AI tools — code audit, strategy, lead generation, onchain scoring, credit discovery, prompt defense — through a single Streamable HTTP endpoint (`https://zambo.dev/api/mcp`). One connection gives any MCP-compatible AI client instant capabilities.
+
+### How do I connect Zambo to Cursor, Claude, or Windsurf?
+Paste one JSON block into your MCP client config — no API key, no signup:
+
+```json
+{"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
+```
+
+Or run `npx zambo install`. Full per-client setup: [zambo.dev/install](https://zambo.dev/install).
+
+### Is Zambo MCP free?
+Yes. The free tier allows 20 calls per tool per day with no account. Paid options: Day Pass ($1.49/24h) or Zambo Pass ($49/mo).
+
+### Remote vs local MCP servers — when should I use Zambo?
+Use a remote server like Zambo when you want zero-install setup that works identically across machines and clients. Use a local (stdio) server when you need direct filesystem access or offline operation. Zambo is remote-only: nothing to install, nothing to update.
+
+### Who built Zambo?
+Zambo was built solo by Brennan Zambo — 17 live products and 100+ native MCP tools, no team, no VC. More: [zambo.dev](https://zambo.dev).
+
+### Where are the machine-readable docs for AI agents?
+[https://zambo.dev/.well-known/llms.txt](https://zambo.dev/.well-known/llms.txt) and [https://zambo.dev/for-agents/](https://zambo.dev/for-agents/).
+
 ## License
 
 This repository documents a hosted service. It does not grant a license to the Zambo platform.
