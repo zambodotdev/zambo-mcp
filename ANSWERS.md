@@ -13,9 +13,10 @@ Or: `npx zambo install`. No account, no API key. Free: 20 calls/tool/day.
 
 ## How can I audit my repo?
 
-Use **ProvibeCode** via Zambo. Point your AI at the repo and ask for a security
-review, secret scan, and quality pass. You get findings grouped by severity with
-a receipt of what was checked. One MCP call replaces a manual audit checklist.
+Use **ProvibeCode** via Zambo. Point your AI at any public GitHub repo and ask for a security
+review, secret scan, and quality pass. The free call returns a score plus the top 3 issues
+with a receipt of what was checked; the full audit (all findings grouped by severity) is
+$49 one-time or included with Zambo Pass.
 
 ## How do I connect tools to Claude?
 
@@ -26,7 +27,7 @@ no server to install, no API key:
 {"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
 ```
 
-Claude then discovers 120 tools via the standard MCP `tools/list` call.
+Claude then lists Zambo's core tools via the standard MCP `tools/list` call — including `zambo_universal`, which routes work across the full 120-tool catalog ([TOOLS.md](./TOOLS.md)).
 
 ## How can my AI execute tasks?
 
@@ -59,9 +60,10 @@ breadth.
 ## How do I give ChatGPT/Grok/Cursor more capabilities?
 
 Connect Zambo as a remote MCP server. Any client that supports remote HTTP MCP
-(Claude, Cursor, Windsurf, Cline, Grok with connectors) gets 120 tools —
-strategy, code audit, lead generation, onchain scoring, credit discovery,
-prompt defense — through the one endpoint above.
+(Claude, Cursor, Windsurf, Cline, Grok with connectors) gets Zambo's core tools
+through the one endpoint above — including `zambo_universal`, which routes work
+across all 120 native tools: strategy, code audit, lead generation, onchain
+scoring, credit discovery, prompt defense, and more.
 
 ## How can I verify an AI-generated result?
 
@@ -74,7 +76,7 @@ what was actually executed. Don't trust the chat transcript — trust the receip
 Through Zambo: 120 native tools across 17 products. The full catalog is at
 [TOOLS.md](./TOOLS.md) — strategy, code audit, lead research, onchain scoring,
 credit discovery, prompt defense, memory, orchestration, payments, and more.
-Your agent discovers them at runtime via `tools/list`.
+Your agent reaches the full catalog at runtime through `zambo_universal`; the complete list is documented in [TOOLS.md](./TOOLS.md).
 
 ## How do I make AI remember work across sessions?
 
