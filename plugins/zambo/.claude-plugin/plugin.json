@@ -1,0 +1,22 @@
+{
+  "name": "zambo",
+  "displayName": "Zambo",
+  "description": "Give your AI hands. 120 native MCP tools (code audit, lead gen, strategy, onchain scoring, prompt defense) behind one zero-auth endpoint. Free 20 calls/tool/day, no account.",
+  "version": "4.0.0",
+  "author": {
+    "name": "Brennan Zambo",
+    "url": "https://github.com/zambodotdev"
+  },
+  "homepage": "https://zambo.dev",
+  "repository": "https://github.com/zambodotdev/zambo-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tools",
+    "code-audit",
+    "automation",
+    "agent"
+  ],
+  "mcpServers": "./.mcp.json"
+}
