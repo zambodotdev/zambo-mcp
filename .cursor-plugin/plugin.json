@@ -1,0 +1,13 @@
+{
+  "name": "zambo",
+  "version": "4.0.0",
+  "description": "Give your AI hands. One URL. Type a job. Get a receipt.",
+  "author": {
+    "name": "Brennan Zambo",
+    "email": "brennanzambo@zambo.dev"
+  },
+  "homepage": "https://zambo.dev",
+  "repository": "https://github.com/zambodotdev/zambo-mcp",
+  "keywords": ["mcp", "remote", "receipts", "zambo"],
+  "logo": "assets/logo.svg"
+}
