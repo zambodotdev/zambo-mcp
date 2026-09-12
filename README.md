@@ -4,7 +4,7 @@
 
 100+ native MCP tools over a single zero-auth remote endpoint — solo-built AI infrastructure by Brennan Zambo. Paste the config into Claude, Cursor, Windsurf, Cline, or any Streamable HTTP MCP client. No API key, no signup. Free: 20 calls/tool/day.
 
-[Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Reliability](https://zambo.dev/reliability) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
+[Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Reliability](https://zambo.dev/reliability) · [Trust](https://github.com/zambodotdev/zambo-mcp/blob/main/TRUST.md) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
 
 [![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/servers/bramboz9494/zambo)
 [![Glama score](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp)
