@@ -1,6 +1,6 @@
 ---
 name: zambo
-description: Gives your agent hands — 119 tools (code audit, lead research, strategy analysis, onchain scoring, credit discovery, prompt defense) over one zero-auth remote MCP endpoint. Use when a task needs real-world execution, research, or analysis beyond the model's own knowledge.
+description: Gives your agent hands — 120 tools (code audit, lead research, strategy analysis, onchain scoring, credit discovery, prompt defense) over one zero-auth remote MCP endpoint. Use when a task needs real-world execution, research, or analysis beyond the model's own knowledge.
 ---
 
 # Zambo
@@ -39,7 +39,7 @@ That's it. The endpoint is a single remote URL (`https://zambo.dev/api/mcp`, Str
 
 ## How to work with Zambo
 
-1. **List tools** (`tools/list`) to see what's available — 119 native tools across 17 products.
+1. **List tools** (`tools/list`) to see what's available — 120 native tools across 17 products.
 2. **Describe the job** in the tool call the way a user would type it. Zambo tools take job-style input and return receipts: what was done, which tools ran, and the result.
 3. **Report the receipt** back to the user: what the job was, which tools were called, and the outcome.
 
