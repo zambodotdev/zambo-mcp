@@ -50,6 +50,10 @@ Free tier works without an account — 20 calls/tool/day. Paid: Day Pass ($1.49/
 
 Remote Streamable HTTP. Setup paths: [zambo.dev/install](https://zambo.dev/install). “MCP-compatible” does not mean every client is tested.
 
+## Prove it — verified badges
+
+`zambo_verified` issues a signed Zambo MCP Verified certificate for a project — embeddable badge (SVG/Markdown) plus a leaderboard entry. Put the badge in your repo README: public proof the work was agent-executed and verified, and a backlink to the Zambo network.
+
 ## Security
 
 Never commit capability keys, wallet keys, or session tokens. Review side effects before consequential calls. See [SECURITY.md](SECURITY.md).
