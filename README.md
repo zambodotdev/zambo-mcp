@@ -2,25 +2,25 @@
 
 **Give your AI hands.** One URL. Type a job. Get a receipt.
 
-Zambo is a hosted remote MCP. Paste it into Claude, Grok, Cursor, or ChatGPT. It does not replace your AI. It runs live tools and returns a receipt. A receipt means Zambo observed the call. It is not automatically proof of an external real-world outcome.
+100+ native MCP tools over a single zero-auth remote endpoint — solo-built AI infrastructure by Brennan Zambo. Paste the config into Claude, Cursor, Windsurf, Cline, or any Streamable HTTP MCP client. No API key, no signup. Free: 20 calls/tool/day.
 
-[Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Pricing](https://zambo.dev/pricing)
+[Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
 
 ## Quick start
 
-```text
-https://zambo.dev/api/mcp
-```
+**Option A — paste into your MCP client config:**
 
 ```json
-{
-  "mcpServers": {
-    "zambo": {
-      "url": "https://zambo.dev/api/mcp"
-    }
-  }
-}
+{"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
 ```
+
+**Option B — npm:**
+
+```bash
+npx zambo install
+```
+
+Endpoint: `https://zambo.dev/api/mcp`
 
 First job after connect:
 
@@ -42,7 +42,7 @@ Default `tools/list` should stay small. Full catalog: `https://zambo.dev/api/mcp
 
 ## Auth and limits
 
-Free tier works without an account. Paid access is Zambo Pass / Day Pass (card or PayPal first). Do not send wallet keys, seed phrases, or card numbers through the MCP.
+Free tier works without an account — 20 calls/tool/day. Paid: Day Pass ($1.49/24h) or Zambo Pass ($49/mo), card or PayPal. Do not send wallet keys, seed phrases, or card numbers through the MCP.
 
 ## Compatibility
 
