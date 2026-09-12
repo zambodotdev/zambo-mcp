@@ -7,6 +7,7 @@
 [Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
 
 [![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/servers/bramboz9494/zambo)
+[![Glama score](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp)
 
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-one--click_install-c8f135?labelColor=1a1a18)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%7B%22name%22%3A%22zambo%22%2C%22url%22%3A%22https%3A%2F%2Fzambo.dev%2Fapi%2Fmcp%22%7D) [![Add to Cursor](https://img.shields.io/badge/Cursor-one--click_add-c8f135?labelColor=1a1a18)](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9hcGkvbWNwIn0=)
 
