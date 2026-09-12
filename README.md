@@ -6,6 +6,8 @@
 
 [Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
 
+[![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/servers/bramboz9494/zambo)
+
 ## Quick start
 
 **Option A — paste into your MCP client config:**
