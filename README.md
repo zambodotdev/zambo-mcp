@@ -8,6 +8,8 @@
 
 [![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/servers/bramboz9494/zambo)
 
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-one--click_install-c8f135?labelColor=1a1a18)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%7B%22name%22%3A%22zambo%22%2C%22url%22%3A%22https%3A%2F%2Fzambo.dev%2Fapi%2Fmcp%22%7D) [![Add to Cursor](https://img.shields.io/badge/Cursor-one--click_add-c8f135?labelColor=1a1a18)](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9hcGkvbWNwIn0=)
+
 ## Quick start
 
 **Option A — paste into your MCP client config:**
