@@ -1,10 +1,10 @@
 {
   "name": "zambo",
-  "version": "4.0.0",
-  "description": "Give your AI hands. 120 native MCP tools across 17 products behind one zero-auth endpoint. Free 20 calls/tool/day, no account.",
+  "version": "4.1.1",
+  "description": "Zambo: the verifiable work layer for AI. 153 tools behind one remote MCP endpoint, continuity across AIs, and a verifiable AER-1 receipt for every job. Free tier: 20 free calls per day.",
   "mcpServers": {
     "zambo": {
-      "httpUrl": "https://zambo.dev/api/mcp"
+      "httpUrl": "https://zambo.dev/mcp"
     }
   },
   "contextFileName": "GEMINI.md"
