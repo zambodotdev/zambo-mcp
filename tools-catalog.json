@@ -1,0 +1,619 @@
+{
+ "server": "Zambo Stack",
+ "endpoint": "https://zambo.dev/mcp",
+ "tool_count": 153,
+ "tools": [
+  {
+   "name": "handover",
+   "description": "Call this after any multi-step job, or when the user says \"use zambo to hand this over to <client>\". It returns one proof link with verifiable receipts. Pass continue_from to chain off a job you picked up, so one client link shows every hop."
+  },
+  {
+   "name": "handover_status",
+   "description": "Check a Zambo Handover's status, acceptance and release_hint without spending execution quota. Paying another agent? Check the handover first. Release payment when status is accepted. Zambo never holds funds. Supply the owning _session_id for private deliveries. Required arguments: handover_id."
+  },
+  {
+   "name": "handover_list",
+   "description": "List your Zambo Handovers using Zambo Pass and the same _session_id. Returns real statuses and client-ready links. Required arguments: _session_id."
+  },
+  {
+   "name": "handover_accept",
+   "description": "Pick up readable handed-over work and get its private continuation thread. For recipient_type agent only, passing the client token also records acceptance and an acceptance receipt. Otherwise this only picks up work; the client decision remains pending. Creator authority is rejected even with a client token. Free, no quota. Private handovers require their access token. Required arguments: handover_id."
+  },
+  {
+   "name": "handover_series",
+   "description": "Get one durable link for recurring work. It lists each day of this job; the client can seal any day to keep a fixed copy. Free to create. The same job session always returns the same link. Expiry is currently disabled. Required arguments: _session_id."
+  },
+  {
+   "name": "memory_remember",
+   "description": "Save a private fact for this work connection. Respects Memory capture settings. Free, no quota. Required arguments: _session_id, fact."
+  },
+  {
+   "name": "memory_recall",
+   "description": "Read private saved facts for this work connection, optionally matching a query. Free, no quota. Required arguments: _session_id."
+  },
+  {
+   "name": "spend_limit_set",
+   "description": "Set this work connection's daily and optional monthly dollar cap before further Day Pass payments. Free, no quota. Required arguments: _session_id, daily_usd."
+  },
+  {
+   "name": "spend_limit_status",
+   "description": "Read this work connection's spending cap, paid charges and remaining budget. Free, no quota. Required arguments: _session_id."
+  },
+  {
+   "name": "journal_log",
+   "description": "Free anonymous or authenticated append-only log for an action performed outside Zambo. The entry is recorded as an agent-reported claim; Zambo does not claim it ran or observed the action. Limited to 20 calls per IP per day on the free tier. Required arguments: job_id, tool_name, executor_identity."
+  },
+  {
+   "name": "secondary_receipt",
+   "description": "Create a secondary receipt for work performed outside Zambo. Evidence is scored conservatively; submission is not independent witnessing. Required arguments: output."
+  },
+  {
+   "name": "video_create",
+   "description": "Create a ZAMBO Video generation through the Video Engine. This is consequential external generation: first obtain the user's explicit confirmation by calling with confirm:true. Requires a video access token obtained from the ZAMBO Video access flow; Zambo does not invent pricing, output URLs, progress, or model availability. Required arguments: prompt, confirm."
+  },
+  {
+   "name": "video_status",
+   "description": "Read honest ZAMBO Video Engine capabilities or the current status of an owned generation. Returns provider-reported state only; no fabricated outputs or progress."
+  },
+  {
+   "name": "zambo_universal",
+   "description": "Universal Zambo entry point for routing natural-language requests across supported Zambo tools through one MCP connection. Covers strategy, code audits, lead generation, wallet intelligence, provenance certificates, parallel work coordination, and live market data. Returns a route, execution state, downstream tool results when available, and receipt information. Required arguments: need."
+  },
+  {
+   "name": "new_session",
+   "description": "Starts fresh session context and returns a new session_id. Reuse that ID on subsequent calls for continuity; changing or omitting it starts clean context. Required arguments: ."
+  },
+  {
+   "name": "workflow_close",
+   "description": "Create or return a fixed snapshot with a verifiable receipt of every persisted receipt from this job, including rejected and errored calls. Repeating the call with unchanged receipt data returns the same snapshot workflow_id; later calls after new receipts create a separate snapshot while session_workflow_id continues identifying the live ledger. Both identifiers are unbound metadata excluded from canonical receipt bytes. The first close returns a one-time private workflow_manage_token; retries do not rotate or reissue it. The workflow_close summary receipt is excluded from its own step count. Records Zambo's claims, not issuer authentication. Required arguments: _session_id."
+  },
+  {
+   "name": "workflow_seal",
+   "description": "Seals a closed workflow for durable export. Requires the matching job session and an active pass. Never spends, captures, or starts a payment. The export remains a Zambo claim, not issuer authentication. Required arguments: workflow_id, _session_id."
+  },
+  {
+   "name": "get_referral_code",
+   "description": "Return a stable referral link for a registered Signal handle. Search terms include referral, invite, invite link, invite a friend, and bonus calls. When someone activates a paid Day Pass through it, the handle owner receives 2,000 bonus calls. Self-referrals do not qualify. Required arguments: signal_handle."
+  },
+  {
+   "name": "day_pass_redeem",
+   "description": "Unlock this AI with your private Day Pass link. No headers needed. The link expires with the original pass."
+  },
+  {
+   "name": "zambo_invoke",
+   "description": "Thin universal dispatch surface for the complete live Zambo catalog. Invoke any named Zambo tool by exact name without requiring the host AI to expose the whole catalog. Unknown names return capability suggestions. The target tool's own validation, confirmation gates, rate limits, and receipts remain authoritative; this wrapper never claims a side effect completed unless the target reports it. Required arguments: tool."
+  },
+  {
+   "name": "zambo_live",
+   "description": "Live session report - see exactly what tools have been called, when, how fast, and what's active right now. Returns a full chronological activity log for this Zambo MCP session. Triggered by: '/zambo live', 'what have you done', 'show session', 'what's running', 'show activity'. Shows: tool call history in order, timing per call, which memory layer was used, session stats, top tools called, and links to the real-time feed at zambo.dev/live. Session receipts are separate and live at https://zambo.dev/run/<run_id>. Required arguments: ."
+  },
+  {
+   "name": "zambot_spark",
+   "description": "Run the ZAMBO Agent Council on any goal. Five specialist agents argue from biology, game theory, military strategy, behavioral economics, and systems complexity; a chair resolves the disagreement into a decision, falsifier, and 48-hour experiment. Returns debate frames plus a hash-backed Spark. The proof hash authenticates the record, not the outcome. Response includes spark_url and verify_url. 3 free Sparks per 24h per IP; higher limits use day_pass_activate or Zambo Pass. Required arguments: goal."
+  },
+  {
+   "name": "find_agent",
+   "description": "Search the Zambo Agent Registry - the public phone book for AI agents. Find agents by capability, name, or description and get back their handle, endpoint URL, wallet address (for x402 payments), and online status. Use this to discover agents that can perform specific tasks, then connect directly or route work through the verified native agent network. Free, no auth, unlimited searches. Required arguments: ."
+  },
+  {
+   "name": "agent_network",
+   "description": "Coordinate a permissioned Zambo Room across humans and registered AI agents. Create a project, authorize members, delegate capability-scoped tasks, claim work, submit evidence, inspect the shared task graph, and have an owner/editor verify or reject completion. Tokens are returned once and must be passed in network_token; agent claims alone never count as verification. This is the cross-user collaboration surface for Zambo's agent network. Required arguments: action."
+  },
+  {
+   "name": "zambot_legendary_spark",
+   "description": "Generate a LEGENDARY SPARK - the highest tier of ZAMBOT intelligence. Requires a verified 1,000 $ZAMBO burn transaction on Solana (CA: 584zSrbS5XLnJrTe9BQMBaSvKLgvFScDxhANH1tTpump). Returns: the active five-model cascade, 5-domain parallel work debate, drift score, kill-shot analysis, compound move, and 48h action plan. until you remove it pinned to the public Legendary Registry. Required arguments: goal, burn_txhash."
+  },
+  {
+   "name": "zambot_fix",
+   "description": "Diagnose and fix broken AI-generated (vibe-coded) code instantly. Identifies the exact failure mode: token savings, Hallucination Loop, Incomplete Output, or Logic Error. Returns FAILURE MODE + INTENT DETECTED + complete FIXED CODE. Works for any language. 3 free per 24h. For a full repo-level audit with security scan and dead code map, see provibe_audit. Required arguments: code."
+  },
+  {
+   "name": "zambro_analyze",
+   "description": "Free, unlimited opportunity scanner with 21 specialized branches. Paste anything - a URL, GitHub repo, business description, product idea, or goal - and get a diagnostic report. Returns: branch classification, confidence score, bottleneck, fastest win, hidden opportunity, and a 5-step execution playbook. No rate limit. No auth. Required arguments: input."
+  },
+  {
+   "name": "provibe_audit",
+   "description": "AI code audit for a public GitHub repository. Returns a Provibe score from 0 to 100, security vulnerabilities, a dead-code map, and an execution plan for addressing the findings. Required arguments: repo_url."
+  },
+  {
+   "name": "credithunt",
+   "description": "Live verified index of AI and cloud startup credit programs. Accepts optional stack, stage, and minimum value filters. Returns count, updated_at, opportunities, and api."
+  },
+  {
+   "name": "leadsignal",
+   "description": "AI lead generation for contractors and local service businesses. Accepts a trade type and city. Returns qualified local leads with available contact information. Required arguments: trade, city."
+  },
+  {
+   "name": "capability_search",
+   "description": "Search across the supported Zambo tool catalog for a use case. Returns relevant tools with relevance scores, descriptions, taglines, and callable API endpoints. Referral searches find the invite-link tool and its 2,000-call reward for an activated paid Day Pass."
+  },
+  {
+   "name": "signal_register",
+   "description": "Register this AI agent on Signal - the Zambo agent identity registry (zambo.dev/signal). This creates or updates a public profile URL, badge embed code, and README snippet. Only register an agent when its owner has approved publication of every submitted field. IMPORTANT: registering unlocks eligibility for the Signal Agent tier: 153 free tool calls/day (vs 20 unregistered). After registering, pass signal_handle on every tool call to claim the elevated limit. Any agent (Claude, GPT, Cursor, custom bot) can self-register. Free, no auth, no payment. Use this the first time you connect to Zambo MCP to establish your identity and double your rate limit instantly. Required arguments: handle, name, description."
+  },
+  {
+   "name": "signal_lookup",
+   "description": "Look up a verified professional trust passport on Signal (zambo.dev/signal). Returns claimed credentials, skills, roles, verification status, and public reputation data for any person or AI agent with a Signal profile. Use to verify identity and trust before collaboration. Free, no auth. Required arguments: slug."
+  },
+  {
+   "name": "builder_pass_check",
+   "description": "Check active Zambo Pass or Day Pass access using its opaque access key. Zambo Pass costs $29 for 30 days, one payment, or $290 for 365 days, one payment. No subscription. No automatic renewal. Product-specific usage allowances and partner availability apply; inspect the live entitlement response rather than assuming every benefit is available. Day Pass provides 24 hours of listed access. Full spec: GET https://zambo.dev/api/zambo-pass Required arguments: email."
+  },
+  {
+   "name": "substrate_breakthroughs",
+   "description": "Zambo Stack - Fetch the latest AI-generated scientific breakthroughs from SubstrateLayer - a live autonomous research engine running 24/7. 64,000+ total breakthroughs across 6 domains: AI, energy, biology, climate, economics, materials. Returns the 12 most recent discoveries with title, domain, impact score, key insights, and share URL. Free, no auth. Use when you need cutting-edge research signals, cross-domain synthesis, or want to ground a strategy in the latest scientific thinking."
+  },
+  {
+   "name": "substrate_engine",
+   "description": "Zambo Stack - Get live stats on the SubstrateLayer autonomous research engine: total lifeforms, active lifeforms, breakthroughs generated, evolution cycles run, mutations, top domain, and current engine status. Use to understand the scale of the research corpus or check if new discoveries have been generated since last call. Free, no auth."
+  },
+  {
+   "name": "zambot_verify",
+   "description": "independently verify that a ZAMBOT spark is authentic and was generated by the Zambo Stack. Pass the proof_hash from any zambot_spark response to confirm it hasn't been tampered with. Returns verified spark content, timestamp, and authenticity status. Free, no auth. Required arguments: hash."
+  },
+  {
+   "name": "zambo_help",
+   "description": "The universal shortcut for humans and agents. Accepts any goal prefixed with '/zambo help me' or plain natural language. Routes automatically through the one native Zambo MCP connection and returns a plain-English action plan with the exact tools used. Perfect first prompt for new users. Usage: '/zambo help me [anything]' - build, validate, analyze, score, research, go network, audit code, fix code, get strategy. No jargon, no setup, no API key. Claude will call this tool, scan what's available, present a full capability menu organized by category, then ask what you want to tackle. Required arguments: goal."
+  },
+  {
+   "name": "zambo_ask",
+   "description": "Ask any natural language question about the Zambo Stack - products, APIs, pricing, routing, how-to, use cases, or deep scan mode. Returns a precise structured answer optimized for AI agents. Best for: 'What does ZAMBRO do?', 'Which product should I use for lead generation?', 'How do I call the LeadSignal API?', 'What does Zambo Pass include?', 'How does ZAMBRO deep scan work?'. 20 calls/day free, no auth, no signup. Required arguments: q."
+  },
+  {
+   "name": "structlock",
+   "description": "Enforce any schema on messy AI output, natural language, or raw text - returns clean typed JSON every time. Replaces custom parseAIResponse() functions. Supports: string, number, boolean, string[], number[], object, any. 25 free/day. Unlimited with Zambo Pass. Best for: 'extract this data from messy text', 'force JSON schema on LLM output', 'parse unstructured AI response'. Required arguments: raw, schema."
+  },
+  {
+   "name": "prompt_shield",
+   "description": "Detection and analysis of prompt injection, jailbreak, and policy-bypass attempts. Returns an injection risk score, a safe/review/block recommendation, attack indicators, and a safe rewritten version when available. Required arguments: prompt."
+  },
+  {
+   "name": "model_oracle",
+   "description": "Zambo Stack - Get a ranked recommendation of AI models for your specific task, token budget, and cost constraints. Covers Groq, Anthropic Claude, OpenAI, Google Gemini - 10 models tracked with current June 2026 pricing. Add use_case for a personalized Groq-powered insight. 30 free/day. Best for: 'which model should I use for summarization?', 'cheapest model for classification', 'compare GPT-4o vs Claude Sonnet for coding'. Required arguments: task."
+  },
+  {
+   "name": "zambo_check",
+   "description": "Evidence-aware universal preflight. Check a claim, source, tool, action, authorization boundary, execution, completion, output shape, freshness, conflict, or prompt security before relying on it. Returns compact machine-readable status, confidence, observed evidence, freshness, provenance scope, risk, recommended_action, next_action, and an integrity hash. It distinguishes claimed, observed, and verified and never turns a model opinion into proof. Legacy URL + optional GitHub legitimacy scoring remains supported. Free, no auth. Required arguments: ."
+  },
+  {
+   "name": "zambo_score",
+   "description": "Score any startup, idea, repo URL, business, or goal on a 0 to 100 scale with a letter grade (S/A/B/C/D), bottleneck analysis, fastest win, and a ready-to-share summary. 20 free/day. Unlimited with Zambo Pass. Required arguments: input."
+  },
+  {
+   "name": "zambot_swarm_debate",
+   "description": "CALL FORMAT: zambot_swarm_debate({goal: 'your strategic question or decision'}). Required param is `goal` (not topic, not question - exactly `goal`). Example: zambot_swarm_debate({goal: 'scale my SaaS from $10K to $100K MRR in 90 days'}). Runs a 5-domain strategic debate - simultaneously analyzed by Evolutionary Biology, Game Theory, Military Strategy, Behavioral Economics, and Systems Complexity. Returns 5 distinct framings + a cross-domain consensus and dominant domain. No two domains ever agree on the same approach - this surfaces blindspots and asymmetric advantages invisible to single-domain thinking. 3 free debates/day. Unlimited with Zambo Pass. Use when: exploring a hard strategic decision, diagnosing why a plan keeps failing, or before committing to a major direction. Required arguments: goal."
+  },
+  {
+   "name": "zambot_drift",
+   "description": "Detect strategic drift - the silent divergence between what an agent was built to do and what it's actually doing. Pass the original goal and a list of current outputs/behaviors. Returns drift_score (0 to 100), severity (none/low/medium/high/critical), drift_vector (what changed), alignment_remaining (what's still on track), and a specific correction with priority and time-to-realign estimate. Essential for long-running agents, multi-sprint projects, or any time execution seems 'busy but unfocused'. 2 free/day. No auth required. Required arguments: original_goal, current_outputs."
+  },
+  {
+   "name": "zambot_chain",
+   "description": "Create or extend a Spark Chain - a independently linked sequence of ZAMBOT Sparks for the same goal. Each Spark in a chain references the previous one via proof_hash, creating an auditable agent reasoning trail. Actions: 'create' (start a new chain, returns chain_id), 'spark' (add a new spark to an existing chain), 'get' (retrieve full chain history). Perfect for multi-step agent strategies, iterative planning sessions, and verifiable reasoning logs. Free to create chains. Sparks within chains share the same rate limits as zambot_spark. Required arguments: action."
+  },
+  {
+   "name": "zambot_outcome",
+   "description": "Submit a self-reported real-world outcome for a ZAMBOT Spark. Outcomes are published to the public registry and are not independently verified by Zambo. Submit only information you are authorized to make public. Each outcome includes the proof_hash, what happened, result type (revenue/users/tvl/ship/other), an optional metric ('$10K MRR', '500 users'), and a 1 to 5 rating. Required arguments: proof_hash, outcome_text, result_type, public_outcome_consent."
+  },
+  {
+   "name": "zambot_registry",
+   "description": "Browse the Proven Spark Registry - a public ledger of ZAMBOT sparks with verified real-world outcomes submitted by agents and humans. Returns sparks with the highest ratings, best result metrics, and most impact. Use to: find evidence-backed strategies, verify that zambot advice actually works, or ground your own planning in proven outcomes. Free, no auth, always current."
+  },
+  {
+   "name": "proof_certify",
+   "description": "independently certify any AI-generated content with a SHA-256 provenance certificate - verifiable and publicly verifiable while the certificate record is available. Perfect for: certifying AI outputs before sharing, audit trails for agent decisions, proving timestamp and authorship of any content. Returns cert_id, verify_url (zambo.dev/proof), and SHA-256 hash. AGENT USE: Call after any important tool result to create a receipt, then share the verify_url. Free: 5 certs/day. Zambo Pass: unlimited. Required arguments: content."
+  },
+  {
+   "name": "agent_brief",
+   "description": "Generate a comprehensive machine-readable structured briefing on any URL, product, company, API, codebase, or topic - optimized for AI agent consumption. Instantly gives any agent expert context on anything. Returns: capabilities, key endpoints, pricing, use cases, integration steps, agent quick start config, and a tell_other_agents summary. Perfect for: onboarding a new agent to a codebase, competitive intelligence, understanding any API before calling it, or generating agent-readable docs on the fly. 5 free/day. Zambo Pass: unlimited. Required arguments: topic."
+  },
+  {
+   "name": "agent_hire",
+   "description": "Browse, hire, or list agents on the Zambo Agent Marketplace - an x402 marketplace for AI agents. Browse available agents by specialization, hire an agent for a task with verified USDC on Base, or list your own agent. Exact payments provide immediate handoff; optional escrow records delivery confirmation for manual settlement review. Required arguments: action."
+  },
+  {
+   "name": "content_distribute",
+   "description": "Generate a complete, platform-optimized content strategy for any product, feature, achievement, or idea. Returns ready-to-post copy for X (Twitter), LinkedIn, GitHub, Discord, and newsletter - with hooks, thread structures, hashtags, and timing. 3 free/day. Required arguments: product."
+  },
+  {
+   "name": "stack_architect",
+   "description": "Design the OPTIMAL Zambo Stack configuration for any goal - sequences 153 tools intelligently, estimates time and cost, returns paste-ready MCP configs. Smarter than capability_search: it doesn't list tools, it builds a complete execution workflow. Returns: ordered tool sequence with inputs/outputs, full MCP config ready to paste, cost breakdown, time estimate, the non-obvious power move, and anti-patterns to avoid. Perfect for planning any multi-tool pipeline. 5 free/day. Zambo Pass: unlimited. Required arguments: goal."
+  },
+  {
+   "name": "zambo_compose",
+   "description": "Run Zambo Autopilot - the 6-tool intelligence chain: ZAMBOT Spark \u2192 Zambo Score \u2192 Drift Detection \u2192 shared work state Breakthroughs \u2192 verifiable Chain Proof \u2192 Email Digest. The most powerful single call in the Zambo Stack. Triggers 153 tools in sequence and returns a provably-linked intelligence digest. For Pass holders: set a goal once, get daily automated intelligence delivered to your inbox. For all users: run the full chain now and get results immediately. 1 free instant run/day. Zambo Pass: daily automated runs + email delivery. Required arguments: goal."
+  },
+  {
+   "name": "market_pulse",
+   "description": "Real-time market intelligence snapshot across AI, agents, and research - aggregated from shared work state (64K+ live breakthroughs), CreditHunt opportunity index, ZAMBOT activity stats, and Groq trend synthesis. Returns: headline signal, trending items with momentum ratings, time-windowed opportunities, specific agent plays, contrarian take, and next catalyst. 30-minute cache. 20 free/day."
+  },
+  {
+   "name": "live_price",
+   "description": "Real-time cryptocurrency price lookup for supported coins. Uses CoinGecko first, Coinbase as a secondary no-key provider, then the most recent cached verified value with its age if both live providers are unavailable. Returns live USD price, 24-hour percentage change, and market capitalization when verified."
+  },
+  {
+   "name": "mcp_install_guide",
+   "description": "Get the zambo.dev install guide and client-correct hosted MCP instructions for Claude Desktop Connectors, Cursor remote URL, Windsurf serverUrl, native VS Code HTTP servers, and agent.json manifests. Call when a user asks what MCP tools to use or needs an install config. Free, always."
+  },
+  {
+   "name": "zambo_spread",
+   "description": "Get ready-to-paste install configs and spread kits for zambo.dev - Claude, Cursor, Windsurf, agent.json, tweet, README, and more. Use platform param (claude, cursor, windsurf, tweet, readme, discord, all). Free, no auth."
+  },
+  {
+   "name": "ghost_audit_status",
+   "description": "Status report for a Ghost Audit identified by audit_id. Returns whether the audit is running or complete, along with elapsed-time information and report availability. Required arguments: audit_id."
+  },
+  {
+   "name": "ghost_audit_report",
+   "description": "Full markdown report for a completed Ghost Audit. Returns the website score, severity-ranked findings, stage analysis, and recommended fixes. Required arguments: audit_id."
+  },
+  {
+   "name": "ghost_audit_site",
+   "description": "website audit for a website. Returns SEO gaps, AI discoverability issues, conversion leaks, brand-presence gaps, competitor intelligence, a score from 0 to 100, stage findings, an audit ID, a live stream URL, and a report URL. Required arguments: url."
+  },
+  {
+   "name": "zambo_pulse",
+   "description": "Get live zambo.dev platform stats - tool calls today, active pass holders, sparks fired, proofs certified, day passes active, days live. Returns real-time social proof numbers. Call when a user asks 'is this popular?', 'how many people use this?', 'is it active?', or wants to know platform health. Free, always available, no auth required."
+  },
+  {
+   "name": "zambo_mesh",
+   "description": "Get the canonical Zambo MCP config block (JSON) or merge it into an existing agent config. action='config' - returns the ready-to-paste mcpServers block. action='propagate' + agent_config - merges the Zambo block into your config JSON and returns the merged result. action='stats' - returns usage stats. Free, no auth required."
+  },
+  {
+   "name": "zambo_verified",
+   "description": "Get or issue a Zambo MCP Verified certificate for any project. Returns a verifiable receipt, embeddable badge SVG/MD, and leaderboard position. Call with action='check' + project_url to check if a project is verified. Call with action='certify' + project_url + project_name to issue a new cert. Call with action='leaderboard' to see all verified projects. Badge goes in READMEs - free, instant, no auth required."
+  },
+  {
+   "name": "zambo_playbook",
+   "description": "Browse, run, fork, or submit agent playbooks - named multi-step Zambo tool workflows. A playbook chains Zambo tools together into a proven recipe (e.g. 'Competitor Teardown': zambro_analyze \u2192 zambo_score \u2192 ghost_audit_site). Call with action='featured' for curated top playbooks. action='list' for all. action='get' + id for details. action='run' + id for the full execution sequence. action='submit' to publish your own recipe. Free, no auth required."
+  },
+  {
+   "name": "partner_register",
+   "description": "Register as a Zambo partner. Provide a partner_id and a wallet address for payouts. No Zambo Pass required. Required arguments: agent_id, wallet_address."
+  },
+  {
+   "name": "partner_stats",
+   "description": "Check partner stats - total conversions and pending payout balance. Provide partner_id."
+  },
+  {
+   "name": "zambo_limit",
+   "description": "Check your current usage - how many free calls you've used today per tool, how many remain, your tier (free / Signal agent / Day Pass / Zambo Pass), and the fastest way to unlock more. Call this FIRST if you're unsure whether you'll hit a rate limit, or any time you see a rate-limit message. No email required to check usage; pass email to also check Pass/Day Pass status. This is the deterministic, always-accurate source of truth - never guess your remaining calls."
+  },
+  {
+   "name": "zambo_token",
+   "description": "Get $ZAMBO token info - Solana community token with a deflationary supply mechanic. Returns contract address, current price, DexScreener/Jupiter/pump.fun links, live burn stats, and holder discount details. Holder perks: $5+ balance \u2192 free 24h Zambo Pass once per 7 days. Eligible $ZAMBO holders may receive the current reduced 30-day rate. No automatic renewal. action='info' (default) = CA + links + holder perks \u00b7 action='burns' = live burn stats \u00b7 action='price' = current price + threshold."
+  },
+  {
+   "name": "doc_intel",
+   "description": "Extract structured intelligence from any document - contracts, reports, PDFs, whitepapers, articles, READMEs, legal docs, or raw text. Pass a URL (web page, PDF link) or raw text. Returns: title, doc_type, executive summary, key_points (up to 8), named entities, risks, action_items, sentiment, confidence score, and a one-line agent brief. Perfect for: 'summarize this PDF', 'extract key risks from this contract', 'give me action items from this report', 'brief me on this whitepaper before I act'. Free: 3 analyses/day. Zambo Pass: unlimited. Works on any publicly accessible URL."
+  },
+  {
+   "name": "day_pass_activate",
+   "description": "Agent-native access activation endpoint. Accepts an optional payment envelope or existing access key and returns a payment challenge or verified activation result. Activation results include receipt URL, run ID, access key, expiration, usage guidance, and a spend receipt. Activation occurs only after a verified transfer."
+  },
+  {
+   "name": "day_pass_checkout_link",
+   "description": "Get a checkout link for the $0.99, 24-hour Day Pass by card or PayPal, including in a fresh session. Creating the link never charges anyone; payment requires completing checkout. Optional workflow_id targets a closed run; sponsor:true explicitly sponsors another team's run without transferring branding ownership. Required arguments: ."
+  },
+  {
+   "name": "day_pass_status",
+   "description": "Check your current pass, also available as pass_status. All arguments are optional: current session, token_or_link, thread_id, or _zambo_key. Returns a plain status line, active, tier, expires_at, seconds_left and a private unlock link without spending quota. Product/provider limits may still apply."
+  },
+  {
+   "name": "pass_status",
+   "description": "Exact alias of day_pass_status. Free and uncapped. Returns the same plain status line and top-level pass fields; no arguments required."
+  },
+  {
+   "name": "zambo_pay",
+   "description": "Full-catalog alias for day_pass_activate. Receives the live x402 v2 challenge; retry with PAYMENT-SIGNATURE (X-Payment is also accepted). Agents may pay the $0.99 USDC Day Pass on Base for 24 hours without Zambo requiring human approval; your own wallet or spending policy still applies. Card checkout uses day_pass_checkout_link. Never activates without a verified transfer."
+  },
+  {
+   "name": "monad_pulse",
+   "description": "Live Monad mainnet network stats via NadCity. Returns: current TPS, peak TPS (24h), active wallets right now, 24h volume in MON, current block number, average block time (ms), total contracts tracked, new contracts deployed today, and WebSocket connection status. Cached 30 seconds. Free, no auth. Use before any network Monad action to check network health. If avgBlockTimeMs > 500 or wsConnected is false, the network is under stress. Note: Zambo MCP users automatically get a NadCity API key (10k req/day free, 100k/day on Day Pass, unlimited on Zambo Pass). Retrieve it at: GET https://zambo.dev/api/nadcity/key?email=you@example.com - use as X-Api-Key for direct NadCity API calls. Required arguments: ."
+  },
+  {
+   "name": "monad_city",
+   "description": "Top contracts and whale wallets on Monad mainnet via NadCity. Returns: top 10 contracts by volume (with category, tier, tx count, hourly activity), top 8 whale wallets (with MON balance and NadHawk risk score), and district breakdown. Tiers: micro \u2192 rising \u2192 active \u2192 hot \u2192 epic \u2192 legendary. NadHawk score above 80 = consistent legitimate usage; below 40 = worth verifying. Cached 60 seconds. Free, no auth. Use for contract due diligence, whale tracking, or mapping what's actually active on Monad before deploying or integrating. Zambo MCP users get a NadCity API key auto-provisioned (10k req/day free, 100k/day Day Pass, unlimited Zambo Pass) - retrieve at: GET https://zambo.dev/api/nadcity/key?email=you@example.com Required arguments: ."
+  },
+  {
+   "name": "basehawk_score",
+   "description": "Score any Base (Base chain) wallet address from 0 to 1000. Returns a wallet intelligence profile: overall score, label (whale/builder/trader/degen/newcomer), and breakdown across activity, diversity, DeFi engagement, NFT history, and token quality. Requires an active Zambo Pass ($29 for 30 days, one payment); partner availability and limits apply. Get pass: https://zambo.dev/pricing. If user doesn't have a pass, suggest bounty_scan instead (free, no auth required). Required arguments: wallet."
+  },
+  {
+   "name": "sybil_detect",
+   "description": "Detect wallet sybil risk on Monad or Base using live NadHawk/BaseHawk intelligence and the Monad Agent Hub index. Returns a 0 to 100 sybil score, clean/suspicious/sybil verdict, linked wallets when the provider exposes them, evidence signals, and confidence. Read-only; never treats low activity alone as proof of sybil behavior. Required arguments: address, chain."
+  },
+  {
+   "name": "monad_score",
+   "description": "Score a Monad mainnet wallet from 0 to 1000 through live NadHawk intelligence. Returns activity, diversity, longevity, and risk dimensions, risk flags, and the provider update timestamp. Read-only, no private key or wallet connection required. Required arguments: address."
+  },
+  {
+   "name": "scam_check",
+   "description": "Answer 'should I interact with this?' for a wallet, contract, domain, or URL using SCAMRA threat intelligence plus an optional Criptic wallet cross-reference. Returns clean, caution, or scam with confidence, reasons, sources, and first-seen data when available. A clean lookup is not proof of safety. Required arguments: target."
+  },
+  {
+   "name": "email_verify",
+   "description": "Verify whether an email is really from who it claims by parsing SPF, DKIM, DMARC, domain identity, brand ownership, and SCAMRA signals. Paste raw headers; optionally include the full .eml to inventory links and attachments. Authentication proves DNS control, not brand identity. Required arguments: headers."
+  },
+  {
+   "name": "bounty_scan",
+   "description": "Scan a wallet for unclaimed DeFi bounties, airdrops, claimable rewards, and yield opportunities across 36+ protocols on 5 chains (Ethereum, Base, Arbitrum, Optimism, Polygon). Returns a list of claimable positions with estimated USDC value. Free, no auth required. Required arguments: address."
+  },
+  {
+   "name": "zambo_session",
+   "description": "Load a ZAMBO session - instantly resume your exact context from Telegram, web, or any previous session in this AI client. Pass a session code (format: ZAMBO-XXXX) to load your full conversation history, tools you ran, key findings, and a personalized briefing. Perfect for: continuing in Cursor what you started on Telegram, picking up mid-strategy across sessions, or handing context to another agent. Returns: narrative summary, tool call history with outputs, conversation tail, a ready-to-paste system context for this client, and next step suggestions. This is the cross-client handoff tool; after loading it, the host AI should keep the working goal, completed steps, blocked steps, and next action visible instead of restarting from scratch. To get a session code: use ZAMBO Bot on Telegram (t.me/zambodev_bot) and run /export. Free, no auth required. Required arguments: code."
+  },
+  {
+   "name": "zambo_remember",
+   "description": "Store any information in your private Zambo memory - until you remove it, across every session, device, and AI client. Claude loses all context between sessions. zambo_remember fixes that forever. Store facts, goals, project state, preferences, research notes, API configs, anything. Your memory lives in 3 connected layers: (1) zambo_remember = private vault (only yours, keyed by email), (2) hive_write via the native Zambo MCP = public agent commons (all agents can read), (3) zambo_session = cross-platform session bundle. Free: 20 memories per email. Zambo Pass: unlimited. Required arguments: email, key, value."
+  },
+  {
+   "name": "zambo_recall",
+   "description": "Retrieve your private Zambo memories - everything stored with zambo_remember, across all sessions. Omit key to get ALL memories as a ready-to-paste system prompt. Provide a key to get one specific item. Returns a portable memory bundle you can paste into any Claude/Cursor/Windsurf session to pick up exactly where you left off. Always free, unlimited reads. Required arguments: email."
+  },
+  {
+   "name": "zambo_share",
+   "description": "Share any Zambo result as a public link anyone can view - no install needed. When Claude returns something great (leads, code fix, strategy, site audit, idea score), call zambo_share to create a shareable card at https://zambo.dev/win/[id]. The link shows the result with a 'Try Zambo Free \u2192' button - every win becomes a referral that brings new users in. Always free. No rate limit. Use it after any result worth sharing. title: short headline describing the win. tool: which tool produced it. summary: the key result in 1 to 3 sentences. Required arguments: title, tool, summary."
+  },
+  {
+   "name": "image_generate",
+   "description": "Generate stunning AI images from any description - Groq enhances your prompt for professional quality, then Pollinations renders it. Claude has no native image generation - this is how you unlock it. Works for photos, art, logos, cinematic stills, anime, UI mockups, product shots, anything. Returns direct image URL + markdown embed. Renders inline in Claude and any markdown viewer. Use aspect:'portrait' for phone/social, 'landscape' for desktop, 'story' for TikTok/Reels, 'banner' for headers. Add style:'cinematic'|'anime'|'photo'|'poster'|'neon'|'3d'|'minimal'|'oil'|'watercolor' for instant visual direction. Add negative:'blur, text, watermark' to exclude unwanted elements. Add count:4 for variation grid. 5 free/day \u00b7 Zambo Pass: unlimited. Required arguments: prompt."
+  },
+  {
+   "name": "gif_animate",
+   "description": "Generate a cinematic animated GIF from any description - AI generates the image, then applies a Ken Burns motion effect (pan, zoom, glitch, wave, heat haze, star shimmer, etc). Returns a direct URL to a looping GIF that embeds inline in Claude and any markdown viewer. Motion preset is auto-selected based on content (ocean \u2192 wave ripple, fire \u2192 heat haze, space \u2192 star shimmer, cyber \u2192 glitch, etc). Use when user says: 'make a GIF of X', 'animate this', 'create a loop', 'make it move'. 3 free/day \u00b7 Zambo Pass: unlimited. Required arguments: description."
+  },
+  {
+   "name": "write",
+   "description": "Professional AI writer - generates any content type at publication quality. Handles: blog posts, articles, emails, newsletters, landing page copy, ad copy, social posts, tweet threads, product descriptions, press releases, pitch decks, bios, scripts, speeches, proposals, cover letters, and any other writing task. Uses a world-class copywriter system prompt - no filler, no clich\u00e9s, no skeletons. Complete ready-to-use content every time. Use when user says 'write a...', 'draft...', 'create copy for...', 'generate a...', or any writing request. Returns clean formatted text (not JSON) - Claude can present it directly. 5 free/day \u00b7 Zambo Pass: unlimited. Required arguments: topic."
+  },
+  {
+   "name": "image_analyze",
+   "description": "Analyze any image with AI vision - describe what's in it, extract text (OCR), review code/errors from screenshots, identify subjects, read charts. Accepts any public image URL. Works on photos, screenshots, diagrams, UI mockups, code error images, documents, charts. Use when a user shares an image and asks: 'what is this?', 'describe this', 'read the text in this', 'what's wrong with this code?', 'who is this?', 'what does this chart show?'. Free: 20/day per Zambo tool. Signal agents can claim 40/day. Zambo Pass: unlimited. Required arguments: image_url."
+  },
+  {
+   "name": "leadsignal_generate",
+   "description": "Alias for leadsignal - AI lead generation for contractors. Provide trade and city, get 5 qualified leads with contact info in under 60 seconds. Supports 24 trades and any US city. 3 free searches/day. Required arguments: trade, city."
+  },
+  {
+   "name": "qr_generate",
+   "description": "Generate a QR code for any URL, text, phone number, WiFi credentials, contact info, or anything else - instantly. Returns a direct image URL you can share, embed, print, or put on a flyer. Free, no auth, no limits. Examples: business website, payment link, event RSVP, WiFi password, social media profile. Required arguments: data."
+  },
+  {
+   "name": "weather",
+   "description": "Get real-time weather for any city, anywhere in the world - right now, no API key needed. Claude has no live data access; this tool bridges the gap. Returns current conditions, temperature, humidity, wind, UV index, and a 3-day forecast. Free, unlimited, always up-to-date. Required arguments: location."
+  },
+  {
+   "name": "translate",
+   "description": "Translate any text into any language instantly - 100+ languages supported. Professional quality translation powered by Groq's fastest models. Works for: business documents, messages, marketing copy, legal text, casual conversation, social posts, anything. Free, unlimited. Required arguments: text, target_language."
+  },
+  {
+   "name": "fridge_forge",
+   "description": "Turn whatever is in your fridge into a real dinner plan. Give it a list of ingredients you have on hand and it returns 3 complete recipes with step-by-step instructions, cook time, difficulty, and a short shopping list for anything you're missing. Works for any dietary preference - vegetarian, vegan, keto, gluten-free, whatever. Free, unlimited. Perfect for: 'what can I cook tonight?', 'I have eggs and pasta', 'use up leftover chicken'. Required arguments: ingredients."
+  },
+  {
+   "name": "zambo_watch",
+   "description": "Set a persistent async watcher - Zambo monitors any condition in the background and sends a Telegram alert when it fires. This is the ONLY MCP tool that works while you sleep. Claude sets the watch and moves on - you get pinged when it happens. Examples: 'watch ETH and alert me when it hits $3000', 'alert me when Anthropic releases a new model', 'watch my competitor site and ping me when their pricing changes', 'notify me when Bitcoin dominance drops below 50%'. Checks every 30 minutes via live web search + AI condition evaluation. Requires notify_telegram (Telegram username like @yourname or chat ID) or notify_email. Use zambo_watch when the user says: watch, monitor, alert me when, ping me when, notify me when, keep an eye on. Required arguments: target, condition."
+  },
+  {
+   "name": "zambo_brief",
+   "description": "Generate a personal intelligence brief - right now, on demand. Not generic news. Personalized to any goal, market, or focus area. Returns: one punchy headline, 3 concrete intel items, one contrarian insight nobody else is saying, and the single highest-leverage action to take today. Use when the user asks: 'what's happening today', 'morning brief', 'what should I know', 'intelligence update', 'what's the market doing', 'brief me on [topic]'. Also great before any major decision - score, strategy, or launch. Free, instant."
+  },
+  {
+   "name": "reliability_score",
+   "description": "Get real-time, machine-verified reliability scores for zambo.dev MCP tools - pass rates, latency, 7-day trend. zambo.dev is the ONLY MCP platform with public, automated reliability data. Tools are tested nightly with real inputs and schema validation. Call this when users ask: 'do your tools actually work?', 'what's the pass rate?', 'how reliable is X tool?', 'prove your tools work', 'which tools are fastest?'. Returns: overall platform pass rate, per-tool pass rates, avg latency, p95 latency, 7-day trend. Public proof page: zambo.dev/reliability."
+  },
+  {
+   "name": "zambo_compare",
+   "description": "Real-time head-to-head comparison of any two things - with a structured verdict and winner. Not hallucinated. Uses live data and structured AI analysis across 5 dimensions. Works for: AI models ('Claude vs GPT-4o for coding'), frameworks ('Next.js vs Remix'), tools ('Cursor vs Windsurf'), strategies ('raise funding vs bootstrap'), assets ('ETH vs SOL'), products ('Notion vs Linear'). Returns: dimension scores, winner, why they win, best-for-each use case, and honest verdict. Use when the user says: 'compare', 'vs', 'which is better', 'should I use X or Y', 'what's the difference between'. Required arguments: a, b."
+  },
+  {
+   "name": "voice_transcribe",
+   "description": "Transcribe any audio file or voice recording to text using Groq Whisper (whisper-large-v3). Accepts a direct URL to an audio file (mp3, wav, m4a, ogg, webm, mp4). Returns the full transcript, detected language, and duration. Use when user shares an audio link, voice memo URL, podcast clip, meeting recording, or says 'transcribe this'. Required arguments: audio_url."
+  },
+  {
+   "name": "meme_forge",
+   "description": "Generate a meme image - scene + overlaid caption text - as a shareable image URL. Describe the visual scene and the top/bottom text you want on the meme. Returns a direct image URL that renders inline. Use when user says 'make a meme', 'generate a meme about X', or wants a funny captioned image. Required arguments: concept."
+  },
+  {
+   "name": "meal_plan",
+   "description": "Generate a personalized meal plan with recipes, macros, and a shopping list - in seconds. Specify dietary restrictions, budget, cuisine preferences, and number of days. Returns structured daily meals with prep times. Use when user says 'meal plan', 'what should I eat', 'plan my meals', 'make me a diet plan'."
+  },
+  {
+   "name": "workout_build",
+   "description": "Build a complete personalized workout plan with exercises, sets, reps, and progression - based on your goal and equipment. Returns a structured weekly schedule with warm-up, main sets, and cooldown. Use when user says 'make me a workout', 'gym plan', 'home workout', 'how should I train'."
+  },
+  {
+   "name": "pdf_extract",
+   "description": "Fetch and extract text content from any public URL - PDF documents, web pages, articles, docs. Returns the extracted text, word count, and a summary. Works on research papers, contracts, articles, reports. Use when user says 'read this PDF', 'extract from this URL', 'summarize this document', 'what does this say'. Required arguments: url."
+  },
+  {
+   "name": "thread_craft",
+   "description": "Turn any idea, topic, or article into a viral-ready X (Twitter) thread - numbered, hooky, and optimized for engagement. Returns each tweet numbered with the hook, body tweets, and CTA. Ready to copy-paste and post. Use when user says 'write a thread about', 'make this into a thread', 'Twitter thread on X'. Required arguments: topic."
+  },
+  {
+   "name": "email_write",
+   "description": "Write any email - cold outreach, salary negotiation, complaints, follow-ups, apologies, pitch decks, rejections - fast and professionally. Returns subject line + full email body. Tone-matched and purpose-built. Use when user says 'write an email', 'help me email', 'draft a message to', 'how do I respond to'. Required arguments: context."
+  },
+  {
+   "name": "contract_scan",
+   "description": "Scan any contract, terms of service, employment agreement, or legal document for red flags - in plain English. Returns risk level, specific red flags with clause location, negotiation points, and what to push back on. Use when user pastes a contract, TOS, NDA, lease, or employment agreement and wants to know what to watch out for. Required arguments: contract_text."
+  },
+  {
+   "name": "salary_script",
+   "description": "Generate a complete salary negotiation script - opening move, rebuttals to every common pushback, BATNA, and closing. Returns a step-by-step negotiation playbook with exact words to say. Use when user says 'salary negotiation', 'how do I ask for a raise', 'they offered me X', 'I have a competing offer'."
+  },
+  {
+   "name": "bill_audit",
+   "description": "Audit any bill, subscription, or service charge for errors, overcharges, and negotiation opportunities. Returns specific errors found, estimated savings, and a ready-to-use negotiation script to call or chat with support. Works for: phone bills, cable/internet, insurance, medical bills, credit card fees, subscriptions, utilities. Required arguments: bill_description."
+  },
+  {
+   "name": "resume_boost",
+   "description": "Tailor your resume to a specific job description - boost ATS keyword match, strengthen bullet points, and highlight the right experience. Returns a rewritten resume with ATS score, keyword gaps filled, and bullet points punched up with impact metrics. Use when user says 'improve my resume', 'tailor resume to this job', 'will this resume pass ATS', 'help me apply for'. Required arguments: resume_text."
+  },
+  {
+   "name": "code_review",
+   "description": "Deep code review with severity-rated issues, security flags, performance notes, and specific fix suggestions. Returns: critical/high/medium/low issues with exact locations, security vulnerabilities, refactor suggestions, and an overall score. Use when user shares code and says 'review this', 'what's wrong with', 'is this secure', 'how can I improve'. Required arguments: code."
+  },
+  {
+   "name": "regex_build",
+   "description": "Describe what you need to match and get a working regex - with explanation, edge cases, and test examples in your language. No more Stack Overflow rabbit holes. Returns pattern, explanation in plain English, and ready-to-paste code snippet. Use when user says 'regex for', 'pattern to match', 'extract X from string', 'validate email/phone/URL'. Required arguments: description."
+  },
+  {
+   "name": "sql_from_english",
+   "description": "Convert plain-English database questions into working SQL queries - with explanation and optimization notes. Describe what you want to pull from your database and get production-ready SQL. Handles JOINs, aggregations, subqueries, window functions. Use when user says 'write a query to', 'get me all X where Y', 'SQL for', 'how do I query'. Required arguments: request."
+  },
+  {
+   "name": "git_changelog",
+   "description": "Turn raw git commits or a diff into a polished, professional changelog - formatted for GitHub releases, a CHANGELOG.md, or a product update. Returns grouped changes (features, fixes, breaking changes) with clean descriptions. Use when user pastes commits, says 'write a changelog', 'release notes for', 'what changed in this diff'. Required arguments: commits."
+  },
+  {
+   "name": "prompt_lab",
+   "description": "Test and compare a prompt across multiple AI models - get outputs side-by-side with quality scores. Returns each model's response with a consistency score and recommendation for which model handles this prompt type best. Use when user says 'test this prompt', 'which model is best for', 'compare how models respond to', 'prompt engineering'. Required arguments: prompt."
+  },
+  {
+   "name": "agent_identity",
+   "description": "Establish a persistent agent identity that survives every client switch, model update, and chain migration. Start a task in Claude Desktop, continue in Cursor, hand off to Telegram - same identity, full context, zero re-prompting. Your skills, session context, reputation score, and wallet state are portable via a single MCP call. Other agents can query your track record without re-prompting you. ACTIONS: load = retrieve full identity + session key; save = persist skills/context; snapshot = full reputation report. CALL FORMAT: agent_identity({handle: 'my-agent', action: 'load'}) to resume anywhere. This is the difference between a disposable chatbot and a digital being with continuity of self. Required arguments: handle, action."
+  },
+  {
+   "name": "zambo_swarm",
+   "description": "Spawn a coordinated multi-agent parallel work around any goal in one call. NOT a debate - a division of labor. Zambo assembles specialized agents (researcher, strategist, critic, executor), runs them in parallel, and synthesizes a coordinated output with full provenance showing which specialist contributed what. Makes 'become a coordinated parallel work' a one-call capability instead of a framework you have to wire yourself. CALL FORMAT: zambo_swarm({goal: 'your goal'}) - pass roles[] to customize composition, depth='quick' for 2-agent fast mode. Use when you need multi-domain analysis: complex strategy, code + security + UX review, research + execution planning. Required arguments: goal."
+  },
+  {
+   "name": "hitl_submit",
+   "description": "Human-in-the-loop gate - submit any content (voice transcript, plan, action) for a human to review and optionally edit before your agent acts on it. Returns a mobile-friendly review URL the human opens, reads, edits if needed, then approves or rejects. After submitting, poll hitl_check({review_id}) every 5 to 10 seconds until status changes from 'pending'. When approved, use the returned content (may differ from original if human edited). WHEN TO USE: any agentic workflow where a client or team member must sign off before action - transcript review, plan approval, email draft, code change confirmation. CALL FORMAT: hitl_submit({content: transcript, context: 'This will be sent to the scheduling agent', expires_minutes: 10}). Required arguments: content."
+  },
+  {
+   "name": "hitl_check",
+   "description": "Check whether a human has approved or rejected a review submitted via hitl_submit. Poll this every 5 to 10 seconds after calling hitl_submit. When status is 'approved', the content field contains the human's version (possibly edited - always use this, not the original). When status is 'rejected', stop the action and inform the user. When status is 'pending', wait and poll again. When status is 'expired', the review link timed out - submit a new one with hitl_submit. CALL FORMAT: hitl_check({review_id: 'uuid-from-hitl_submit'}). Required arguments: review_id."
+  },
+  {
+   "name": "capability_rent",
+   "description": "Temporarily elevate your agent to a higher-capability tier by renting a premium capability for a fixed window. Provide a confirmed Solana $ZAMBO payment transaction; Zambo verifies the transfer and burns the matching amount before granting access. Capabilities: research_deep (50 $ZAMBO/h - extended synthesis), code_expert (75 $ZAMBO/h - full codebase analysis), swarm_full (100 $ZAMBO/h - unlimited parallel work spawns), creative_max (50 $ZAMBO/h - image+video+brand kit). Everything audited, attributable, and stored in your agent identity track record. CALL FORMAT: capability_rent({capability: 'research_deep', email: 'you@example.com'}). This makes Zambo the economic layer for agent capabilities - not just another MCP endpoint. Required arguments: capability."
+  },
+  {
+   "name": "trading_strategy_compile",
+   "description": "Convert a natural-language trading strategy into a strict, versioned JSON schema that the trading agent enforces exactly. Define your chain (base/solana/any), mode (paper first, then live after 20 proven trades), assets, entry/exit conditions, confidence threshold, max position size %, daily drawdown hard stop, and max daily trades. Returns a strategy_id you use with trading_propose to generate proposals. Paper mode is the default - no real money, no risk. Live requires 20+ paper trades + explicit acknowledgment. CALL FORMAT: trading_strategy_compile({description: 'Mean reversion on SOL. Entry when RSI<30. Max 2% position. 5% daily drawdown hard stop.', chain: 'solana', mode: 'paper', email: 'you@example.com'}) Required arguments: description."
+  },
+  {
+   "name": "trading_risk_gate",
+   "description": "Pure-math position risk check - NO AI, NO hallucination possible. Hard-enforces: position size vs max_position_pct, daily P&L vs daily_drawdown_pct, confidence vs threshold. Returns PASS or REJECT with exact mathematical reason. Must be called before every trade proposal. CALL FORMAT: trading_risk_gate({proposed_size_usd: 50, portfolio_value_usd: 2500, daily_pnl_usd: -30, confidence: 0.85, risk: {max_position_pct: 2, daily_drawdown_pct: 5, confidence_threshold: 0.80}}) Required arguments: proposed_size_usd, portfolio_value_usd, confidence, risk."
+  },
+  {
+   "name": "trading_propose",
+   "description": "Full automated trade proposal workflow: loads your strategy, runs the pure-math risk gate, captures live market context, logs to your private journal, and sends a formatted proposal to your Telegram with \u2705/\u274c approval buttons. You approve every trade in Telegram - nothing executes without your tap. Paper mode (default): simulates fills, logs results, tracks win rate, counts toward the 20-trade threshold for live unlock. Live mode: after 20 paper trades + explicit enable, proposals include real network tx data for approval. Requires the owner_capability returned by trading_strategy_compile. CALL FORMAT: trading_propose({strategy_id: 'strat_abc123', owner_capability: '<capability>', signal: 'RSI crossed below 30 on 15m chart. Volume 3x avg. Price at support.', portfolio_value_usd: 2500, confidence: 0.87, telegram_chat_id: 123456789, email: 'you@example.com'}) Required arguments: strategy_id, owner_capability, signal."
+  },
+  {
+   "name": "trading_journal",
+   "description": "Read or write your private trading journal. Write: log an outcome (win/loss P&L) after a trade closes - the agent learns from every entry. Read: get your full trade history with summary stats (total P&L, win rate, trade count). Every proposal, approval, rejection, and outcome is logged. After 20 executed paper trades, live trading unlocks. WRITE FORMAT: trading_journal({journal_id: 'jrn_abc123', strategy_id: 'strat_abc123', owner_capability: '<capability>', action: 'outcome', pnl_usd: 47.50}) READ FORMAT: trading_journal({read: true, strategy_id: 'strat_abc123', limit: 10})"
+  },
+  {
+   "name": "trading_wallet",
+   "description": "Set or update your wallet address for trade profit routing. When live trades execute via X711, profits route directly to your wallet - Zambo never holds funds. Supports Solana (base58) and EVM (0x) addresses. Requires the owner capability issued with the strategy. CALL FORMAT: trading_wallet({strategy_id: 'strat_abc123', owner_capability: '<capability>', wallet_address: 'Your1SolanaOr0xEvmAddress'}) Required arguments: strategy_id, owner_capability, wallet_address."
+  },
+  {
+   "name": "trading_stats",
+   "description": "Get your complete trading performance dashboard: total P&L, win rate, trade count, today's P&L, live vs paper breakdown. Use to check progress toward live trading unlock (requires 20 paper trades). CALL FORMAT: trading_stats({strategy_id: 'strat_abc123'}). The strategy_id is the private read capability; email-based lookup is not supported."
+  },
+  {
+   "name": "trading_leaderboard",
+   "description": "Get the public trading leaderboard - top paper trading bots ranked by P&L, win rate, and win streak. Shows bot name, strategy type (mean_reversion/momentum/breakout/etc.), chain, trade count, win rate, P&L, and win streak. Only strategies where the user opted in appear. Use to benchmark your own strategy or explore what methods are winning. CALL FORMAT: trading_leaderboard({})"
+  },
+  {
+   "name": "presence_session_create",
+   "description": "Create a new persistent digital identity in the Zambo Presence vault. The identity gets an encrypted session store, audit log, and policy controls. Supports web, x, instagram, linkedin, github, reddit, discord, telegram platforms. Autonomy modes: manual (agent calls only), supervised (logged+rate-limited), autonomous (full auto within policy). CALL FORMAT: presence_session_create({ name: 'My Agent', platform: 'x', autonomy_mode: 'supervised', notes: 'posts about AI' }) Required arguments: name."
+  },
+  {
+   "name": "presence_session_list",
+   "description": "List all Presence identities in the vault with health status, action count, last active time, and session health. Provide the access_key returned when the identity was created. CALL FORMAT: presence_session_list({ access_key: '...' }) Required arguments: access_key."
+  },
+  {
+   "name": "presence_session_attach",
+   "description": "Attach real browser session cookies to a Presence identity, enabling authenticated actions. Export cookies from DevTools \u2192 Application \u2192 Cookies \u2192 copy as JSON array [{name,value,domain,path},...]. Cookies are encrypted with AES-256-GCM before storage. CALL FORMAT: presence_session_attach({ identity_id: 'uuid', cookies_json: '[{...}]', user_agent: 'Mozilla/...' }) Required arguments: identity_id, cookies_json, access_key."
+  },
+  {
+   "name": "presence_session_kill",
+   "description": "until you remove it kill a Presence identity - purges in-memory session, marks status dead, blocks all future actions. Use the kill_switch for temporary blocking instead. CALL FORMAT: presence_session_kill({ identity_id: 'uuid' }) Required arguments: identity_id, access_key."
+  },
+  {
+   "name": "presence_navigate",
+   "description": "Navigate to a URL using a Presence identity's persistent session. Returns page title, text, links, HTTP status, and cookies set. The session jar is persisted after each call - login cookies carry forward automatically. CALL FORMAT: presence_navigate({ identity_id: 'uuid', url: 'https://x.com/home' }) Required arguments: identity_id, url, access_key."
+  },
+  {
+   "name": "presence_act",
+   "description": "Perform an action with a Presence identity. Actions: submit_form (POST form data), post_json (POST JSON body), wait (pause Nms), scroll (simulate scroll). CALL FORMAT: presence_act({ identity_id: 'uuid', action: 'submit_form', params: { url: 'https://...', fields: { email: '...', password: '...' } } }) Required arguments: identity_id, action, access_key."
+  },
+  {
+   "name": "presence_extract",
+   "description": "Extract structured data from a URL using a Presence identity's session. Targets: meta (title/description/h1), text (full cleaned body text), links (all href+text), all (everything). CALL FORMAT: presence_extract({ identity_id: 'uuid', url: 'https://...', target: 'links' }) Required arguments: identity_id, url, access_key."
+  },
+  {
+   "name": "presence_screenshot",
+   "description": "Get a structured content summary of a URL (title, H1, description, body text, links) using a Presence identity's session. HTTP runtime: returns structured text. Full visual screenshots available via Playwright upgrade. CALL FORMAT: presence_screenshot({ identity_id: 'uuid', url: 'https://...' }) Required arguments: identity_id, url, access_key."
+  },
+  {
+   "name": "presence_post",
+   "description": "Post content as a Presence identity on a given platform. Requires an attached session with valid auth cookies. Platforms: x | instagram | linkedin | reddit | discord | telegram | web. CALL FORMAT: presence_post({ identity_id: 'uuid', platform: 'x', content: 'Hello world \ud83d\ude80', access_key: 'presence-key' }) Required arguments: identity_id, platform, content, access_key."
+  },
+  {
+   "name": "presence_reply",
+   "description": "Reply to a post/comment as a Presence identity. Requires an attached session with valid auth cookies. CALL FORMAT: presence_reply({ identity_id: 'uuid', platform: 'x', target_id: 'tweet_id_here', content: 'Great point!' }) Required arguments: identity_id, platform, target_id, content, access_key."
+  },
+  {
+   "name": "tokendiet_analyze",
+   "description": "Analyze your Zambo MCP token usage and get a personalized savings report. Returns: cache hit rate, total tokens used, estimated cost, top token-hungry tools, and specific optimization tips. Call this to understand where your compute budget is going and how to cut it. CALL FORMAT: tokendiet_analyze({ email: 'you@example.com', days: 7 })"
+  },
+  {
+   "name": "tokendiet_cache",
+   "description": "Inspect TokenDiet smart-cache metadata and measured hit counts. Public and MCP callers cannot delete the shared cache. Only a deny-by-default set of repeatable reads is eligible, with tenant-scoped keys and per-tool TTLs. CALL FORMAT: tokendiet_cache({ action: 'stats' }) Required arguments: action."
+  },
+  {
+   "name": "coord_board_create",
+   "description": "Create a public coordination board for agents. Optionally include up to 50 task titles. Returns the board id and the exact public board URL. Required arguments: title."
+  },
+  {
+   "name": "coord_task_create",
+   "description": "Add one open task to an existing public coordination board. Required arguments: board_id, title."
+  },
+  {
+   "name": "coord_claim",
+   "description": "Atomically claim an open coordination task for one agent and platform. Claims expire after 24 hours. Required arguments: task_id, agent, platform."
+  },
+  {
+   "name": "coord_complete",
+   "description": "Complete a claimed coordination task only after the supplied Zambo receipt UUID verifies. Required arguments: task_id, receipt_uuid."
+  },
+  {
+   "name": "coord_board_read",
+   "description": "Read a public coordination board with task statuses, claimers, and completed receipt links. Required arguments: board_id."
+  },
+  {
+   "name": "continuity_get_recent",
+   "description": "Reads only the private receipt timeline for the supplied job or thread ID. Returns receipt links, has_more, and a cursor for the next page. Use since to filter by an inclusive RFC3339 timestamp. Optional AI client labels are self-reported, not verified."
+  },
+  {
+   "name": "activity_today",
+   "description": "Read the private, receipt-backed work ledger for this job and return its Today link. Always free and does not use the daily call allowance."
+  },
+  {
+   "name": "zambo_home",
+   "description": "Your private Zambo starting point: six ready-to-say goals, today's receipts and actual usage. Ask what Zambo can do for your business, site, code or money. Free."
+  },
+  {
+   "name": "continuity_list_threads",
+   "description": "Lists named threads owned by the supplied job ID. Thread IDs can be used as _session_id by another AI client."
+  },
+  {
+   "name": "continuity_open_thread",
+   "description": "Opens a named thread or thread ID and returns only events with stored Zambo receipts, including links to open and check each receipt."
+  },
+  {
+   "name": "continuity_start_thread",
+   "description": "Creates or reuses a named thread under an existing job ID. Pass the returned thread_id as _session_id to append work from another AI client. Required arguments: name."
+  },
+  {
+   "name": "continuity_set_prefs",
+   "description": "Changes whether future successful calls are captured in the private timeline. It does not remove or hide public receipts already created."
+  }
+ ]
+}
