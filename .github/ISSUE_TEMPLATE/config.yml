@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Zambo website
+    url: https://zambo.dev
+    about: Product, docs, and pricing
+  - name: Verify a receipt
+    url: https://zambo.dev/verify/
+    about: Check any Zambo receipt
