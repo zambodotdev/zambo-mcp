@@ -1,0 +1,10 @@
+{
+  "name": "Try Zambo",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
+  "customizations": {
+    "vscode": {
+      "extensions": ["anthropic.claude-code"]
+    }
+  }
+}
