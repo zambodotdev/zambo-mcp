@@ -1,20 +1,19 @@
 # Zambo for Gemini CLI
 
-**Give your AI hands.** One URL. Type a job. Get a receipt.
+**The verifiable work layer for AI.**
 
-Zambo is an MCP execution and verification layer: 120 native tools across 17 live products
-(code audit, lead generation, live price tracking, crypto payments, prompt-injection defense,
-QR generation, and more) behind a single zero-auth remote endpoint.
+Zambo is a remote MCP server: 153 tools, memory and continuity across AIs, and a verifiable AER-1 receipt for every job.
 
 ## Connection
 
-- MCP endpoint: `https://zambo.dev/api/mcp` (Streamable HTTP, no API key, no signup)
-- Free: 20 calls/tool/day
-- Self-host: `npx zambo install`
+- MCP endpoint: https://zambo.dev/mcp (Streamable HTTP, no API key, no signup)
+- Free tier: 20 free calls per day, then they upgrade
+- Add it: https://zambo.dev/add/
 
 ## Usage tips
 
-- Prefer `zambo_universal` / `capability_search` to discover the right tool for a job.
-- Every completed job returns a receipt — surface the receipt URL to the user.
+- Start with capability_search to find the right tool, or zambo_universal to describe a job in plain language.
+- HANDOVER hands work between AIs, or to a client, as one link with the full record attached.
+- Every call returns a receipt. Surface the receipt URL to the user.
+- Verify a receipt: https://zambo.dev/verify/
 - Docs for agents: https://zambo.dev/for-agents/
-- Full tool catalog: https://zambo.dev/llms-full.txt
