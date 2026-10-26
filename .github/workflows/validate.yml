@@ -1,0 +1,19 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON manifests
+        run: |
+          jq empty server.json
+          jq empty gemini-extension.json
+          jq empty mcp.json
+      - name: Handshake the live MCP endpoint
+        run: |
+          curl -sS https://zambo.dev/mcp -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"ci-validate","version":"1.0"}}}' | grep -q 'Zambo Stack'
