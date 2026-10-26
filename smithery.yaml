@@ -1,11 +1,11 @@
 startCommand:
   type: http
-  url: https://zambo.dev/api/mcp
+  url: https://zambo.dev/mcp
 
 name: Zambo
 description: >
   Give your AI hands. One URL. Type a job. Get a receipt.
-  Remote MCP at https://zambo.dev/api/mcp for Claude, Grok, Cursor, and ChatGPT.
+  Remote MCP at https://zambo.dev/mcp for Claude, Grok, Cursor, and ChatGPT.
   Free to start. No API key.
 
 homepage: https://zambo.dev
