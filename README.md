@@ -7,7 +7,7 @@ Give your AI hands, memory, and proof. One remote MCP endpoint with 153 tools, c
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
 **Main code home: [GitLab](https://gitlab.com/rambozambodotdev/zambo).** Development happens there. This GitHub page is the public pointer.
-
+[![validate](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml)
 ## Add it
 
 Tell your AI: "Add Zambo from https://zambo.dev/mcp"
