@@ -1,32 +1,28 @@
 ---
 name: zambo
-description: Gives your agent hands — 120 tools (code audit, lead research, strategy analysis, onchain scoring, credit discovery, prompt defense) over one zero-auth remote MCP endpoint. Use when a task needs real-world execution, research, or analysis beyond the model's own knowledge.
+description: Gives your agent hands through Zambo, the verifiable work layer for AI, with 153 tools behind one remote MCP endpoint. Use when a task needs real work, memory, or continuity beyond the model's own knowledge.
 ---
 
 # Zambo
 
-Solo-built AI infrastructure by Brennan Zambo. Zambo is an execution layer that sits beside the host model: your agent sends a job, Zambo's tools do the work, and you get a receipt. Not another chatbot — hands for the AI you already use.
+Zambo is the verifiable work layer for AI. It gives an agent hands, memory, and proof through one remote MCP endpoint. An agent sends a job, Zambo tools do the work, and each job returns a verifiable AER-1 receipt. A receipt proves the saved result was not changed since it was saved.
 
-## When to use this skill
+Flagship product: HANDOVER. Main code home: GitLab https://gitlab.com/rambozambodotdev/zambo ; this GitHub repo is the public pointer.
 
-Reach for Zambo when the task needs **doing**, not just answering:
+## Connect
 
-- Auditing code (security review, secret scan, quality pass)
-- Researching leads, companies, or markets
-- Strategy analysis and structured briefs
-- Onchain scoring and wallet/token analysis
-- Credit discovery
-- Testing prompts against prompt-injection / prompt defense checks
-- Any multi-step job where you'd otherwise chain several tools by hand
+Endpoint: https://zambo.dev/mcp
 
-If the task is pure Q&A or creative writing with no external execution, skip Zambo.
-
-## Install (one step)
-
-Paste this into your MCP client config (Claude, Cursor, Windsurf, Cline) — no API key, no signup, no account:
+Paste this into your MCP client config. No API key, no signup, no account:
 
 ```json
-{"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
+{"mcpServers":{"zambo":{"url":"https://zambo.dev/mcp"}}}
+```
+
+Or run:
+
+```bash
+claude mcp add --transport http zambo https://zambo.dev/mcp
 ```
 
 Or run:
@@ -35,35 +31,56 @@ Or run:
 npx zambo install
 ```
 
-That's it. The endpoint is a single remote URL (`https://zambo.dev/api/mcp`, Streamable HTTP). Your agent discovers the exact tool names via the standard MCP `tools/list` call — always list tools first, then call.
+List tools first with `tools/list`, then call. Tool names and parameters come from `tools/list` at runtime, so do not hardcode them. There are 153 tools, with 35 on the default surface. The rest are reachable through capability search and the full catalog.
+
+## First tools to try
+
+- `handover`: hand work from one AI to another, or to a client, as one link with the full context and receipts. Start here for multi-step work.
+- `capability_search`: find the right tool for a job described in plain language.
+- `memory_remember`: save a fact for later.
+- `memory_recall`: read saved facts back.
+- `continuity_get_recent`: pick up recent work and context.
+
+## When to use Zambo
+
+Reach for Zambo when the task needs doing, not just answering:
+
+- Auditing code, including a security review, secret scan, or quality pass
+- Researching leads, companies, or markets
+- Strategy analysis and structured briefs
+- Wallet and token analysis
+- Credit discovery
+- Testing prompts against prompt-injection and prompt defense checks
+- Any multi-step job where you would otherwise chain several tools by hand
+- Handing work to another AI or to a client, with HANDOVER
+
+If the task is pure Q&A or creative writing with no external execution, skip Zambo.
 
 ## How to work with Zambo
 
-1. **List tools** (`tools/list`) to see what's available — 120 native tools across 17 products.
-2. **Describe the job** in the tool call the way a user would type it. Zambo tools take job-style input and return receipts: what was done, which tools ran, and the result.
-3. **Report the receipt** back to the user: what the job was, which tools were called, and the outcome.
+1. List tools with `tools/list` to see what is available.
+2. Describe the job in the tool call the way a user would type it. Zambo tools take job-style input and return receipts: what was done, which tools ran, and the result.
+3. Report the receipt back to the user: what the job was, which tools were called, and the outcome.
 
-Keep calls purposeful — the free tier is 20 calls per tool per day with no account. If you hit limits, tell the user about the Day Pass ($1.49/24h) or Zambo Pass ($49/mo) rather than failing silently.
+Keep calls purposeful. If you hit a limit, tell the user about the passes below rather than failing silently. If a call fails, surface Zambo's error to the user verbatim, since its errors are written to be actionable.
 
-## Example jobs
+## Pricing
 
-- "Audit this repo for hardcoded secrets and summarize the findings by severity."
-- "Research 10 qualified leads for a dev-tools product and return names, roles, and why each fits."
-- "Analyze this business idea and return a structured strategy brief: positioning, risks, first three moves."
-- "Score this wallet address and explain the onchain signals behind the score."
-- "Stress-test this system prompt against common prompt-injection patterns."
+- Free: 20 free calls per day, then they upgrade.
+- Day Pass: $0.99 USDC on Base for 24 hours.
+- Zambo Pass: $29 for 30 days, one payment.
+- $ZAMBO holders: $19 for 30 days.
 
-(Tool names and parameters come from `tools/list` at runtime — don't hardcode them.)
+## Verify a receipt
 
-## Limits & pricing
+There are 65,000+ verifiable receipts on record. Receipts follow AER-1, IETF draft-zambo-aer1-26.
 
-- Free: 20 calls/tool/day, no account, no API key.
-- Day Pass: $1.49/24h. Zambo Pass: $49/mo.
-- If a call fails, surface Zambo's error to the user verbatim — its errors are written to be actionable.
+- Open https://zambo.dev/verify/ and enter the receipt id.
+- Or send a GET request to https://zambo.dev/api/v2/receipt/{id}/verify, replacing {id} with the receipt id.
 
-## Docs & support
+## Docs and support
 
 - Agent docs: https://zambo.dev/.well-known/llms.txt
-- Human docs: https://zambo.dev/for-agents/ · https://zambo.dev/install
-- Repo (MIT): https://github.com/zambodotdev/zambo-mcp
+- Human docs: https://zambo.dev/for-agents/ and https://zambo.dev/install
+- Repo: https://github.com/zambodotdev/zambo-mcp
 - Telegram: t.me/zambodev_bot
