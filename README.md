@@ -1,92 +1,51 @@
-# Zambo MCP
+# Zambo
 
-**Give your AI hands.** One URL. Type a job. Get a receipt.
+**The verifiable work layer for AI.**
 
-100+ native MCP tools over a single zero-auth remote endpoint — solo-built AI infrastructure by Brennan Zambo. Paste the config into Claude, Cursor, Windsurf, Cline, or any Streamable HTTP MCP client. No API key, no signup. Free: 20 calls/tool/day.
+Give your AI hands, memory, and proof. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
 
-[Connect](https://zambo.dev/mcp) · [Install](https://zambo.dev/install) · [Reliability](https://zambo.dev/reliability) · [Trust](https://github.com/zambodotdev/zambo-mcp/blob/main/TRUST.md) · [Docs for agents](https://zambo.dev/for-agents/) · [Pricing](https://zambo.dev/pricing) · [Telegram](https://t.me/zambodev_bot)
+[Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
-[![Smithery](https://img.shields.io/badge/smithery-listed-c8f135?labelColor=1a1a18)](https://smithery.ai/servers/bramboz9494/zambo)
-[![Glama score](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp)
+## Add it
 
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-one--click_install-c8f135?labelColor=1a1a18)](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%7B%22name%22%3A%22zambo%22%2C%22url%22%3A%22https%3A%2F%2Fzambo.dev%2Fapi%2Fmcp%22%7D) [![Add to Cursor](https://img.shields.io/badge/Cursor-one--click_add-c8f135?labelColor=1a1a18)](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9hcGkvbWNwIn0=)
+Tell your AI: "Add Zambo from https://zambo.dev/mcp"
 
-## Quick start
-
-**Option A — paste into your MCP client config:**
+Or paste the config:
 
 ```json
-{"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
+{
+  "mcpServers": {
+    "zambo": {
+      "url": "https://zambo.dev/mcp"
+    }
+  }
+}
 ```
 
-**Option B — npm:**
+Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No API key. No signup.
 
-```bash
-npx zambo install
-```
+## First move: HANDOVER
 
-Endpoint: `https://zambo.dev/api/mcp`
+HANDOVER is the front door: hand work from one AI to another, or to a client, as one link with the full record attached. The receiving side picks it up and keeps going, and every step carries its receipt.
 
-First job after connect:
+## What you get
 
-```text
-Use Zambo to get the current BTC-USD price. Show the number, the source, and the receipt URL. If the tool fails, say it failed.
-```
+- Tools: 153 behind one endpoint. Research, data, documents, media, payments, and more.
+- Continuity: memory and sessions that persist across calls, clients, and models.
+- Proof: every call returns a verifiable AER-1 receipt. A receipt proves the saved result was not changed after it was saved.
 
-Do not use “SOL price + health check” as a demo until that route returns a price.
+## Pricing
 
-## Verify the protocol
+Free tier: 20 free calls per day, then they upgrade.
+Day Pass: $0.99 for 24 hours.
+Zambo Pass: $29 for 30 days. $ZAMBO holders: $19 for 30 days.
+Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
-```bash
-curl -sS https://zambo.dev/api/mcp \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"curl","version":"1.0"}}}'
-```
+## Proof
 
-Default `tools/list` should stay small. Full catalog: `https://zambo.dev/api/mcp?full=true`.
+65,000+ receipts on record. Zambo receipts follow AER-1, the Agent Execution Receipt standard, now at draft 26:
+https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
 
-## Auth and limits
+## Built by
 
-Free tier works without an account — 20 calls/tool/day. Paid: Day Pass ($1.49/24h) or Zambo Pass ($49/mo), card or PayPal. Do not send wallet keys, seed phrases, or card numbers through the MCP.
-
-## Compatibility
-
-Remote Streamable HTTP. Setup paths: [zambo.dev/install](https://zambo.dev/install). “MCP-compatible” does not mean every client is tested.
-
-## Prove it — verified badges
-
-`zambo_verified` issues a signed Zambo MCP Verified certificate for a project — embeddable badge (SVG/Markdown) plus a leaderboard entry. Put the badge in your repo README: public proof the work was agent-executed and verified, and a backlink to the Zambo network.
-
-## Security
-
-Never commit capability keys, wallet keys, or session tokens. Review side effects before consequential calls. See [SECURITY.md](SECURITY.md).
-
-## FAQ
-
-### What is Zambo MCP?
-Zambo MCP is a remote MCP (Model Context Protocol) server built solo by Brennan Zambo. It exposes 100+ native AI tools — code audit, strategy, lead generation, onchain scoring, credit discovery, prompt defense — through a single Streamable HTTP endpoint (`https://zambo.dev/api/mcp`). One connection gives any MCP-compatible AI client instant capabilities.
-
-### How do I connect Zambo to Cursor, Claude, or Windsurf?
-Paste one JSON block into your MCP client config — no API key, no signup:
-
-```json
-{"mcpServers":{"zambo":{"url":"https://zambo.dev/api/mcp"}}}
-```
-
-Or run `npx zambo install`. Full per-client setup: [zambo.dev/install](https://zambo.dev/install).
-
-### Is Zambo MCP free?
-Yes. The free tier allows 20 calls per tool per day with no account. Paid options: Day Pass ($1.49/24h) or Zambo Pass ($49/mo).
-
-### Remote vs local MCP servers — when should I use Zambo?
-Use a remote server like Zambo when you want zero-install setup that works identically across machines and clients. Use a local (stdio) server when you need direct filesystem access or offline operation. Zambo is remote-only: nothing to install, nothing to update.
-
-### Who built Zambo?
-Zambo was built solo by Brennan Zambo — 17 live products and 100+ native MCP tools, no team, no VC. More: [zambo.dev](https://zambo.dev).
-
-### Where are the machine-readable docs for AI agents?
-[https://zambo.dev/.well-known/llms.txt](https://zambo.dev/.well-known/llms.txt) and [https://zambo.dev/for-agents/](https://zambo.dev/for-agents/).
-
-## License
-
-This repository documents a hosted service. It does not grant a license to the Zambo platform.
+Solo-built by Brennan Zambo: https://zambo.dev/founder/
