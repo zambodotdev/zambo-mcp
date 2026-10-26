@@ -24,6 +24,10 @@ Or paste the config:
 }
 ```
 
+**Claude Code:** `claude mcp add --transport http zambo https://zambo.dev/mcp`
+
+**One command:** `npx zambo install`
+
 Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No API key. No signup.
 
 ## First move: HANDOVER
