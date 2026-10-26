@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "zambo": {
-      "url": "https://zambo.dev/api/mcp"
+      "url": "https://zambo.dev/mcp"
     }
   }
 }
