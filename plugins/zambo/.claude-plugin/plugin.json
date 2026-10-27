@@ -1,8 +1,8 @@
 {
   "name": "zambo",
   "displayName": "Zambo",
-  "description": "Give your AI hands. 120 native MCP tools (code audit, lead gen, strategy, onchain scoring, prompt defense) behind one zero-auth endpoint. Free 20 calls/tool/day, no account.",
-  "version": "4.0.0",
+  "description": "Give your AI hands, memory, and proof. 153 tools behind one keyless MCP endpoint, memory that follows you across AIs, and a receipt for every call that anyone can check at zambo.dev/verify.",
+  "version": "4.1.0",
   "author": {
     "name": "Brennan Zambo",
     "url": "https://github.com/zambodotdev"
