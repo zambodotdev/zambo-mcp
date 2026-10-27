@@ -1,6 +1,6 @@
 {
   "name": "zambo",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "Zambo: the verifiable work layer for AI. 153 tools behind one remote MCP endpoint, continuity across AIs, and a verifiable AER-1 receipt for every job. Free tier: 20 free calls per day.",
   "mcpServers": {
     "zambo": {
