@@ -8,6 +8,15 @@ Give your AI hands, memory, and proof. One remote MCP endpoint with 153 tools, c
 
 **Main code home: [GitLab](https://gitlab.com/rambozambodotdev/zambo).** Development happens there. This GitHub page is the public pointer.
 [![validate](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml)
+**Add Zambo to your AI:**
+
+[![Add to Claude](https://img.shields.io/badge/Add_to-Claude-0b0e14?style=for-the-badge&logoColor=white&color=5eead4)](https://zambo.dev/add/?ref=readme-claude)
+[![Add to ChatGPT](https://img.shields.io/badge/Add_to-ChatGPT-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-chatgpt)
+[![Add to Cursor](https://img.shields.io/badge/Add_to-Cursor-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-cursor)
+[![Add to VS Code](https://img.shields.io/badge/Add_to-VS_Code-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-vscode)
+[![Add to Gemini](https://img.shields.io/badge/Add_to-Gemini-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-gemini)
+[![Add to Grok](https://img.shields.io/badge/Add_to-Grok-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-grok)
+
 ## Add it
 
 Tell your AI: "Add Zambo from https://zambo.dev/mcp"
@@ -16,11 +25,11 @@ Or paste the config:
 
 ```json
 {
-  "mcpServers": {
-    "zambo": {
-      "url": "https://zambo.dev/mcp"
-    }
-  }
+"mcpServers": {
+"zambo": {
+"url": "https://zambo.dev/mcp"
+}
+}
 }
 ```
 
@@ -28,7 +37,17 @@ Or paste the config:
 
 **One command:** `npx zambo install`
 
+**One click:** [Install in VS Code](https://vscode.dev/redirect/mcp-install?name=zambo&config=%7B%22url%22%3A%22https%3A//zambo.dev/mcp%22%7D) · [Install in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9tY3AifQ==)
+
 Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No API key. No signup.
+
+## Your first prompt
+
+Paste this into any AI that has Zambo connected:
+
+> Get the live BTC price with Zambo, then give me the receipt link so I can check the work.
+
+Open the link it gives you. The receipt shows the exact saved result and its sha-256 digest, so you can check the work instead of trusting the answer. You can also paste any receipt link at [zambo.dev/verify](https://zambo.dev/verify/).
 
 ## First move: HANDOVER
 
