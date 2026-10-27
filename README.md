@@ -55,3 +55,8 @@ https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
 ## Built by
 
 Solo-built by Brennan Zambo: https://zambo.dev/founder/
+
+---
+next step: add zambo to your ai in one url, no key, no account: https://zambo.dev/add/?ref=zambo-mcp
+got a receipt link from someone? check it in seconds: https://zambo.dev/verify/
+every call returns a receipt. a receipt proves the saved bytes are unchanged. it does not prove the answer is right.
