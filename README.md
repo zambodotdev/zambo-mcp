@@ -25,11 +25,11 @@ Or paste the config:
 
 ```json
 {
-"mcpServers": {
-"zambo": {
-"url": "https://zambo.dev/mcp"
-}
-}
+  "mcpServers": {
+    "zambo": {
+      "url": "https://zambo.dev/mcp"
+    }
+  }
 }
 ```
 
