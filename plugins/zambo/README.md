@@ -1,3 +1,4 @@
+install in claude code: /plugin marketplace add zambodotdev/zambo-mcp then /plugin install zambo@zambo. commands: /zambo:verify, /zambo:remember, /zambo:handover.
 # Zambo — Claude Code Plugin
 
 Give your AI hands. This plugin connects Claude Code to the Zambo MCP server:
@@ -23,3 +24,8 @@ discovery, prompt defense) behind one zero-auth endpoint.
 - https://zambo.dev
 - https://github.com/zambodotdev/zambo-mcp (MIT)
 - Agent docs: https://zambo.dev/.well-known/llms.txt
+
+---
+next step: add zambo to your ai in one url, no key, no account: https://zambo.dev/add/?ref=claude-plugin
+got a receipt link from someone? check it in seconds: https://zambo.dev/verify/
+every call returns a receipt. a receipt proves the saved bytes are unchanged. it does not prove the answer is right.
