@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use Zambo MCP, please cite it as below."
+title: "Zambo MCP"
+authors:
+  - family-names: Zambo
+    given-names: Brennan
+date-released: 2026-10-27
+url: "https://zambo.dev/mcp"
+abstract: "Zambo MCP is the hosted MCP server for the verifiable work layer for AI: 153 tools behind one keyless endpoint, memory and continuity across AIs, and a verifiable AER-1 receipt for every call."
