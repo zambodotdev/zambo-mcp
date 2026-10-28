@@ -2,7 +2,7 @@
 
 **The verifiable work layer for AI.**
 
-Give your AI hands, memory, and proof. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
+Give your AI hands, memory, and proof. Your AI forgets everything the second you close the chat. Zambo fixes that: wrap up a session in one AI and continue it in any other with a code, and picking up is always free. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
 
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
@@ -55,15 +55,15 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 
 ## What you get
 
+- Continuity: memory and sessions that persist across calls, clients, and models. Wrap up a session in one AI and continue it in any other with a code; picking up is always free.
 - Tools: 153 behind one endpoint. Research, data, documents, media, payments, and more.
-- Continuity: memory and sessions that persist across calls, clients, and models.
 - Proof: every call returns a verifiable AER-1 receipt. A receipt proves the saved result was not changed after it was saved.
 
 ## Pricing
 
-Free tier: 20 free calls per day, then they upgrade.
-Day Pass: $0.99 for 24 hours.
-Zambo Pass: $29 for 30 days. $ZAMBO holders: $19 for 30 days.
+Free tier: 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+Day Pass: $0.99, unlimited for 24 hours.
+Zambo Pass: $29 for 30 days, $290 for 365 days. $ZAMBO holders: $19 for 30 days.
 Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
 ## Proof
