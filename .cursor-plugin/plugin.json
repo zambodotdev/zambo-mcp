@@ -1,7 +1,7 @@
 {
   "name": "zambo",
-  "version": "4.0.0",
-  "description": "Give your AI hands. One URL. Type a job. Get a receipt.",
+  "version": "4.1.1",
+  "description": "The verifiable work layer for AI. 153 tools behind one keyless MCP endpoint, HANDOVER continuity across AIs, and a verifiable AER-1 receipt for every call. Free: 20 calls and 1 wrap-up every day; picking up is always free.",
   "author": {
     "name": "Brennan Zambo",
     "email": "brennanzambo@zambo.dev"
@@ -11,3 +11,14 @@
   "keywords": ["mcp", "remote", "receipts", "zambo"],
   "logo": "assets/logo.svg"
 }
+
+
+
+
+
+
+
+
+
+
+
