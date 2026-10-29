@@ -1,8 +1,8 @@
 {
   "name": "zambo",
   "displayName": "Zambo",
-  "description": "Give your AI hands, memory, and proof. 153 tools behind one keyless MCP endpoint, memory that follows you across AIs, and a receipt for every call that anyone can check at zambo.dev/verify.",
-  "version": "4.1.0",
+  "description": "The verifiable work layer for AI. 153 tools behind one keyless MCP endpoint, HANDOVER continuity across AIs (wrap up in one AI, pick up in another), and a verifiable AER-1 receipt for every call that anyone can check at zambo.dev/verify. Free: 20 calls and 1 wrap-up every day; picking up is always free.",
+  "version": "4.1.1",
   "author": {
     "name": "Brennan Zambo",
     "url": "https://github.com/zambodotdev"
@@ -20,3 +20,23 @@
   ],
   "mcpServers": "./.mcp.json"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
