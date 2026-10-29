@@ -61,7 +61,7 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 
 ## Pricing
 
-Free tier: 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+Free tier: 20 calls + 1 wrap-up free every day; picking up in another AI is always free.
 Day Pass: $0.99, unlimited for 24 hours.
 Zambo Pass: $29 for 30 days, $290 for 365 days. $ZAMBO holders: $19 for 30 days.
 Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
