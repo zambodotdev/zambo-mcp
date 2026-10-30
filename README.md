@@ -68,7 +68,7 @@ Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
 ## Proof
 
-65,000+ receipts on record. Zambo receipts follow AER-1, the Agent Execution Receipt standard, now at draft 26:
+85,000+ receipts on record. Zambo receipts follow AER-1, the Agent Execution Receipt standard, now at draft 26:
 https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
 
 ## Independent baseline
