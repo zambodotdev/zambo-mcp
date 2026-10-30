@@ -71,6 +71,10 @@ Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 65,000+ receipts on record. Zambo receipts follow AER-1, the Agent Execution Receipt standard, now at draft 26:
 https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
 
+## Independent baseline
+
+Dominion Observatory, an independent watcher of MCP tool manifests, captured the default 35-tool surface of https://zambo.dev/mcp on 2026-10-30 and published the record in [issue #5](https://github.com/zambodotdev/zambo-mcp/issues/5#issuecomment-6511599676). Manifest SHA-256: `4520aa4d5cbb8f26913c3e358ed258bf4db24678f28be4aab8875d758e426ca7`. The full 153-tool catalog is a separate surface (add ?full=true to the endpoint) and is not part of that baseline. Anyone can fetch the live manifest and compare it against the outside record.
+
 ## Built by
 
 Solo-built by Brennan Zambo: https://zambo.dev/founder/
