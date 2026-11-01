@@ -73,7 +73,7 @@ Keep calls purposeful. If you hit a limit, tell the user about the passes below 
 
 ## Verify a receipt
 
-There are 90,000+ verifiable receipts on record. Receipts follow AER-1, IETF draft-zambo-aer1-26.
+There are 91,000+ verifiable receipts on record. Receipts follow AER-1, IETF draft-zambo-aer1-26.
 
 - Open https://zambo.dev/verify/ and enter the receipt id.
 - Or send a GET request to https://zambo.dev/api/v2/receipt/{id}/verify, replacing {id} with the receipt id.
