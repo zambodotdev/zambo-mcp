@@ -1,23 +1,30 @@
 install in claude code: /plugin marketplace add zambodotdev/zambo-mcp then /plugin install zambo@zambo. commands: /zambo:verify, /zambo:remember, /zambo:handover.
-# Zambo — Claude Code Plugin
+# Zambo: Claude Code Plugin
 
-Give your AI hands. This plugin connects Claude Code to the Zambo MCP server:
-120 native tools (code audit, lead gen, strategy, onchain scoring, credit
-discovery, prompt defense) behind one zero-auth endpoint.
+Give your AI hands, memory, and proof. Zambo is the verifiable work layer for
+AI. This plugin connects Claude Code to the Zambo MCP server: 153 tools (36
+on the default surface) for code audit, lead generation, strategy, wallet
+scoring, credit discovery, and prompt defense, behind one zero-auth endpoint.
 
 ## Install
 
 ```
 /plugin marketplace add zambodotdev/zambo-mcp
-/plugin install zambo@zambo-marketplace
+/plugin install zambo@zambo
 ```
 
 ## What you get
 
-- **Zero auth** — free 20 calls/tool/day, no account, no API key
-- **120 tools** via `https://zambo.dev/api/mcp` (Streamable HTTP)
-- **Receipts** — every job returns a verifiable receipt (`mode=verify`)
-- **Cross-session continuity** — sessions continue across clients
+- **Zero auth**: 20 calls plus 1 wrap-up free every day; picking up in another AI is always free. No account, no API key.
+- **153 tools** via `https://zambo.dev/mcp` (Streamable HTTP), 36 on the default surface
+- **Receipts**: every job returns a verifiable receipt (`mode=verify`)
+- **Cross-session continuity**: sessions continue across clients
+
+## Pricing
+
+Your first Day Pass is free: claim one in the MCP, no payment details. After
+that, a Day Pass is $0.99, unlimited for 24 hours. Zambo Pass: $29 for 30
+days, $290 for 365 days. $ZAMBO holders: $19 for 30 days.
 
 ## Links
 
