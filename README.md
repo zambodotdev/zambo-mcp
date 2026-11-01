@@ -1,5 +1,8 @@
 # Zambo
 
+[![zambo receipts](https://img.shields.io/endpoint?url=https://rambozambodotdev.gitlab.io/aer1-hub/badges/receipts.json)](https://zambo.dev/numbers/)
+[![package downloads](https://img.shields.io/endpoint?url=https://rambozambodotdev.gitlab.io/aer1-hub/badges/downloads.json)](https://zambo.dev/numbers/)
+
 **The verifiable work layer for AI.**
 
 Give your AI hands, memory, and proof. Your AI forgets everything the second you close the chat. Zambo fixes that: wrap up a session in one AI and continue it in any other with a code, and picking up is always free. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
