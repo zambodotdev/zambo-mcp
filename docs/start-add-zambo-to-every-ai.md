@@ -23,6 +23,6 @@ Open that page and follow the steps for your app. It takes about a minute per ap
 
 ## Cost
 
-20 free calls per day, then they upgrade. A Day Pass is $0.99 for 24 hours when you want the full run of it.
+20 calls and 1 wrap-up free every day, then they upgrade. A Day Pass is $0.99 for 24 hours when you want the full run of it.
 
 Check any receipt: https://zambo.dev/verify/
