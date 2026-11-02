@@ -19,13 +19,13 @@ via `capability_search`, or browsable at
 | `ghost_audit_report` | Fetches the finished audit report. |
 | `credithunt` | Surfaces funding and credit opportunities. |
 | `prompt_shield` | Scans text for prompt-injection attempts. |
-| `day_pass_activate` | Activates the $1.49/24h Day Pass. |
+| `day_pass_activate` | Activates the $0.99/24h Day Pass. |
 
 ## Payments
 
 | Tool | What it does |
 |---|---|
-| `zambo_pay` | Creates a $1.49 USDC payment challenge on Base (x402). This is the payment rail; there is no other payment tool. |
+| `zambo_pay` | Creates a $0.99 USDC payment challenge on Base (x402). This is the payment rail; there is no other payment tool. |
 
 ## Discovery pattern
 
