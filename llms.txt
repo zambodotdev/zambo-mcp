@@ -20,7 +20,7 @@
 
 ## Pricing
 
-- Free tier: 20 free calls per day
+- Free tier: 20 calls and 1 wrap-up free every day
 - Day Pass: $0.99 for 24 hours
 - Zambo Pass: $29 for 30 days ($19 for $ZAMBO holders)
 - Agents pay USDC on Base via x402; humans pay by card or PayPal
