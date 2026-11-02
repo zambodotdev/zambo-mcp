@@ -32,7 +32,7 @@ The endpoint is the same for every client.
 
 - **No signup, no key.** The server answers anonymous calls. The first call
   lands in seconds.
-- **Free tier:** 20 free calls per day, then they upgrade. No card is taken to start.
+- **Free tier:** 20 calls and 1 wrap-up free every day, then they upgrade. No card is taken to start.
 - **153 tools behind the one URL.** The default surface lists 35 everyday
   tools so a client's tool picker stays readable; the full set is served by
   the same endpoint.
