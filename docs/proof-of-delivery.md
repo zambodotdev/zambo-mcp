@@ -58,7 +58,7 @@ the work runs through the endpoint from the first call:
 
 Add that to your MCP client (per-client steps at https://zambo.dev/add).
 No signup, no key needed to start, first call in seconds. The free tier is
-20 free calls per day, then they upgrade. On Zambo, the verifiable work
+20 calls and 1 wrap-up free every day, then they upgrade. On Zambo, the verifiable work
 layer for AI, the delivery flow is mechanical: work normally, open a
 handover when the deliverable is ready, send the client the package link,
 and any sign-off they give on the package is recorded in the package.
