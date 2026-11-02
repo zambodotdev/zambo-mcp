@@ -3,7 +3,7 @@
 > Zambo is the verifiable work layer for AI: 153 tools behind one remote MCP endpoint (https://zambo.dev/mcp), memory and continuity across AIs, HANDOVER for passing work between AIs or to a client as one link, and a verifiable AER-1 receipt for every job.
 
 Connect: claude mcp add --transport http zambo https://zambo.dev/mcp  |  npx zambo install  |  or tell your AI: read https://zambo.dev/add/ and add Zambo.
-Free tier: 20 free calls per day. Day Pass $0.99 for 24 hours. Zambo Pass $29 for 30 days ($19 for $ZAMBO holders). Agents pay USDC on Base via x402; humans pay by card or PayPal.
+Free tier: 20 calls and 1 wrap-up free every day. Day Pass $0.99 for 24 hours. Zambo Pass $29 for 30 days ($19 for $ZAMBO holders). Agents pay USDC on Base via x402; humans pay by card or PayPal.
 Verify any receipt: https://zambo.dev/verify/
 Main code home: https://gitlab.com/rambozambodotdev/zambo  |  AER-1 standard: https://github.com/zambodotdev/aer-1 (IETF draft-zambo-aer1-26)
 
