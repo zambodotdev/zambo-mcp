@@ -20,7 +20,7 @@ Zambo is the verifiable work layer for AI. It gives an agent hands, memory, and 
 
 ## Is there a free tier?
 
-Yes. The free tier is 20 free calls per day, then they upgrade.
+Yes. The free tier is 20 calls and 1 wrap-up free every day, then they upgrade.
 
 ## What is a verifiable receipt?
 
