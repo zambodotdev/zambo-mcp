@@ -19,7 +19,7 @@ Zambo is positioned as an execution and manager layer that sits beside a host AI
 
 ## Pricing
 
-- **Free tier:** 20 free calls per day, no account required
+- **Free tier:** 20 calls and 1 wrap-up free every day, no account required
 - **Day Pass:** $0.99 USDC on Base per 24 hours
 - **Zambo Pass:** $29 per 30 days, one payment
 - **$ZAMBO holders:** $19 per 30 days
