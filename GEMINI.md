@@ -7,7 +7,7 @@ Zambo is a remote MCP server: 153 tools, memory and continuity across AIs, and a
 ## Connection
 
 - MCP endpoint: https://zambo.dev/mcp (Streamable HTTP, no API key, no signup)
-- Free tier: 20 free calls per day, then they upgrade
+- Free tier: 20 calls and 1 wrap-up free every day, then they upgrade
 - Add it: https://zambo.dev/add/
 
 ## Usage tips
