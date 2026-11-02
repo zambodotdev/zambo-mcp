@@ -54,7 +54,7 @@ Save that in your client's MCP configuration, or follow the per-client steps
 at https://zambo.dev/add. There is no signup and no key needed to start. The
 first call lands in seconds, and every call returns its result plus a
 verifiable receipt at a public link.
-The free tier is 20 free calls per day, then they upgrade.
+The free tier is 20 calls and 1 wrap-up free every day, then they upgrade.
 The endpoint serves 153 tools in total behind the one URL, 35 of them on the default surface.
 
 ## A worked example you can check yourself
