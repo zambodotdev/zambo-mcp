@@ -2,7 +2,6 @@
 
 [![zambo receipts](https://img.shields.io/endpoint?url=https://rambozambodotdev.gitlab.io/aer1-hub/badges/receipts.json)](https://zambo.dev/numbers/)
 [![package downloads](https://img.shields.io/endpoint?url=https://rambozambodotdev.gitlab.io/aer1-hub/badges/downloads.json)](https://zambo.dev/numbers/)
-[![Verified on Appside](https://appside.build/mcp-servers/zambo/badge.svg)](https://appside.build/mcp-servers/zambo/)
 
 **The verifiable work layer for AI.**
 
