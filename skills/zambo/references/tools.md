@@ -1,7 +1,7 @@
 # Zambo tool working set
 
 These are the tools on the default 11-tool surface plus the most-used
-routed tools. The complete catalog (120 tools) is searchable at runtime
+routed tools. The complete catalog (153 tools) is searchable at runtime
 via `capability_search`, or browsable at
 `https://zambo.dev/.well-known/llms.txt`.
 
@@ -9,7 +9,7 @@ via `capability_search`, or browsable at
 
 | Tool | What it does |
 |---|---|
-| `zambo_universal` | Execute any of the 120 tools by name. Arguments: `tool`, plus tool-specific args. Supports `mode: execute \| continue \| verify` and `session_id` for multi-step trails. |
+| `zambo_universal` | Execute any of the 153 tools by name. Arguments: `tool`, plus tool-specific args. Supports `mode: execute \| continue \| verify` and `session_id` for multi-step trails. |
 | `capability_search` | Describe a job in plain words; returns the best-matching tool(s). |
 | `live_price` | Live price for crypto, stocks, FX with source attribution. |
 | `leadsignal` | Lead generation for contractors and local services. |
@@ -30,7 +30,7 @@ via `capability_search`, or browsable at
 ## Discovery pattern
 
 When the job doesn't match a default tool, call `capability_search` first.
-It searches all 120 tools, including media generation, QR codes, research,
+It searches all 153 tools, including media generation, QR codes, research,
 automation, and verification utilities. Then execute via `zambo_universal`.
 
 Example flow for "audit my site and tell me what's broken":
