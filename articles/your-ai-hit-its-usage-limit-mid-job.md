@@ -1,5 +1,7 @@
 # Your AI Hit Its Usage Limit Mid-Job. Here Is the 90-Second Rescue.
 
+![Your AI Hit Its Usage Limit Mid-Job. Here Is the 90-Second Rescue.](og/og-article-a-limit-rescue.jpg)
+
 The message lands in the middle of the good part. Usage limit reached. Come back later. Your agent was three steps into a job it finally understood, and now the session is a locked door with the work still inside it.
 
 You know the rest of the script. Open a different AI. Paste what you can remember. Re-explain the goal, the constraints, the dead ends. Twenty minutes later the new session is roughly where the old one died, except it is working from your summary of the work instead of the work itself. The steps it cannot see, it quietly redoes. The step that failed, it never learns about.
