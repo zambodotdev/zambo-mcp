@@ -1,5 +1,7 @@
 # Brennan Zambo: The Solo Founder Who Wrote the Receipt Standard for AI Work
 
+![Brennan Zambo: The Solo Founder Who Wrote the Receipt Standard for AI Work](og/og-fame-brennan-zambo.jpg)
+
 Standards are supposed to come from committees. This one came from one person in Tampa, Florida, working alone, with no team and no venture capital. Brennan Zambo wrote AER-1, an IETF Internet-Draft that defines what a receipt for AI agent work has to contain. Then strangers started implementing it.
 
 That is the improbable part, and it is also the checkable part. AER-1 is a public draft, draft-zambo-aer1, and its revision history is public. Zambo closed the draft at revision -26, posted October 22, 2026, expiring April 25, 2027. The draft ships with a public conformance corpus: 143 test vectors and 146 checks that anyone can download and run. A standard you can test is a standard you do not have to take on faith, and the testing is exactly what happened next.
