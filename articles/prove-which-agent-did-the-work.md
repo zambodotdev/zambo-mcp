@@ -1,5 +1,7 @@
 # Prove Which Agent Did the Work: Chain of Custody for Multi-Agent Jobs
 
+![Prove Which Agent Did the Work: Chain of Custody for Multi-Agent Jobs](og/og-article-b-chain-of-custody.jpg)
+
 The dispute starts politely. A client, a teammate, or your own future self looks at a finished multi-agent job and asks the simplest question in the world: which agent did this part, and what exactly did it return?
 
 Most setups cannot answer. Not evasively, just structurally. A log line records that a tool ran at 13:10. It does not freeze what the call returned, it does not survive an edit to the log file, and it was written by the same system whose work is now in question. So the answer degrades into a retelling: the system said worker two handled it. Trust the retelling or redo the job.
