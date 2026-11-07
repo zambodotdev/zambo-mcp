@@ -11,6 +11,10 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
+**Free tier:** 20 calls + 1 wrap-up free every day; picking up in another AI is always free. Day Pass: $0.99 for unlimited use for 24 hours.
+
+**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 117,789 total, 3,449 issued on November 7, 2026. Live counts: https://zambo.dev/numbers/
+
 **Main code home: [GitLab](https://gitlab.com/rambozambodotdev/zambo).** Development happens there. This GitHub page is the public pointer.
 [![validate](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml)
 **Add Zambo to your AI:**
