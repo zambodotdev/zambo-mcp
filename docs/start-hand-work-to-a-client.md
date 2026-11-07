@@ -24,6 +24,6 @@ You stop re-explaining finished work. The handover is the explanation, and it ho
 ## Add it free
 
 One URL, no key: https://zambo.dev/add/?ref=tutorials
-20 calls and 1 wrap-up free every day, then they upgrade.
+20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
 
 Check any receipt: https://zambo.dev/verify/

@@ -6,9 +6,9 @@ Zambo is the verifiable work layer for AI. Endpoint: https://zambo.dev/mcp
 {"mcpServers":{"zambo":{"url":"https://zambo.dev/mcp"}}}
 ```
 
-**153 tools**, with 35 on the default surface. Flagship product: HANDOVER.
+**153 tools**, with 36 on the default surface. Flagship product: HANDOVER.
 
-- Free: 20 calls and 1 wrap-up free every day, then they upgrade.
+- Free: 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
 - Day Pass: $0.99 USDC on Base for 24 hours.
 - Zambo Pass: $29 for 30 days, one payment.
 - $ZAMBO holders: $19 for 30 days.

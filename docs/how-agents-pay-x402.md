@@ -66,7 +66,7 @@ the server a purchase was being made. Pay through the 402.
 
 None of the above is needed to start. The endpoint answers anonymous
 calls with no signup and no key, with the free tier at
-20 calls and 1 wrap-up free every day, then they upgrade. Add it to a client and make
+20 calls and 1 wrap-up free every day. Picking up in another AI is always free. Add it to a client and make
 the first call in seconds:
 
 ```json

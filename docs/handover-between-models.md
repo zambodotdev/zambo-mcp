@@ -51,7 +51,7 @@ your calls run through the endpoint:
 
 Add that to your MCP client's configuration, or use the per-client steps at
 https://zambo.dev/add. No signup, no key needed to start, first call in
-seconds. The free tier is 20 calls and 1 wrap-up free every day, then they upgrade. From
+seconds. The free tier is 20 calls and 1 wrap-up free every day. Picking up in another AI is always free. From
 there the flow is three calls: `handover` creates the package from the
 session's work, `handover_status` reads its current state, and
 `handover_list` shows the handovers on the account. Each handover also has
@@ -77,6 +77,15 @@ a summary of it.
    recorded in the package, which is what makes later disputes short: the
    dispute pack is the package, opened at the page where the two accounts
    of the work diverge.
+
+On Zambo, step 4 is one tool call: the receiving agent calls
+`handover_accept`, pickup is free, and the acceptance is recorded on the
+handover itself with a verifiable receipt of its own. What the receiver
+gets in that call is the package above in machine-readable form: the goal,
+the summary, the next steps, and the step receipts with their source
+links. A receiver that finds a step it cannot verify flags the handover
+on the same record instead of accepting it, so acceptance means the
+record was checked, not just received.
 
 ## The same discipline without tooling
 
