@@ -11,7 +11,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
-**Free tier:** 20 calls + 1 wrap-up free every day; picking up in another AI is always free. Day Pass: $0.99 for unlimited use for 24 hours.
+**Free tier:** every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.. Day Pass: $0.99 for unlimited use for 24 hours.
 
 **Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 117,789 total, 3,449 issued on November 7, 2026. Live counts: https://zambo.dev/numbers/
 
@@ -70,7 +70,7 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 
 ## Pricing
 
-Free tier: 20 calls + 1 wrap-up free every day; picking up in another AI is always free.
+Free tier: every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free..
 Day Pass: $0.99, unlimited for 24 hours.
 Zambo Pass: $29 for 30 days. $ZAMBO holders: $19 for 30 days. Lifetime Pass: $250, one payment.
 Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
