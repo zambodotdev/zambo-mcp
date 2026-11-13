@@ -31,12 +31,12 @@ The receipt format is AER-1, an open Internet-Draft (draft-zambo-aer1) closed at
 
 ## The rescue, step by step
 
-1. Work through one endpoint that receipts every call, so the record exists before you need it. On Zambo that is https://zambo.dev/mcp, 153 tools behind one URL, 36 on the default surface.
+1. Work through one endpoint that receipts every call, so the record exists before you need it. On Zambo that is https://zambo.dev/mcp, 153 tools behind one URL, 37 on the default surface.
 2. When the limit warning appears, or the model gets deprecated, or you simply want a different tool for the next phase, wrap the job: goal, summary, next steps. The wrap is the handover.
 3. Open the other AI. Hand it the handover link and tell it to pick the job up. Pickup is always free, and the receiver's acceptance is recorded on the same page.
 4. The new session continues from the recorded next step. Its own calls add new receipts to the same job, so the seam between the two sessions stays visible instead of getting papered over.
 
-The free tier covers the rehearsal: 20 calls and 1 wrap-up free every day. If the wall is a daily event for you, the Day Pass is $0.99 for 24 hours of unlimited calls and wrap-ups. As of today the public stream stands at 112,937 receipts and 199,335 package downloads, so the record you are leaning on is a busy one.
+The free tier covers the rehearsal: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. If the wall is a daily event for you, the Day Pass is $0.99 for 24 hours of unlimited calls and wrap-ups. As of today the public stream stands at 112,937 receipts and 199,335 package downloads, so the record you are leaning on is a busy one.
 
 ## What the rescue does not do
 
@@ -46,4 +46,4 @@ The deeper mechanics of the handover itself, package, check, accept, continue, a
 
 Your AI will hit its limit again. That part is scheduled. Whether the job dies with the session is the part you choose beforehand.
 
-Add Zambo to your agent: https://zambo.dev/add/ (20 calls and 1 wrap-up free every day; picking up in another AI is always free).
+Add Zambo to your agent: https://zambo.dev/add/ (every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day; picking up in another AI is always free).

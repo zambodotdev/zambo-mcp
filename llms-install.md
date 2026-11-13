@@ -28,7 +28,7 @@ npx zambo install
 
 ## Free tier and passes
 
-- Free: 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+- Free: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free.
 - Day Pass: $0.99 USDC on Base for 24 hours.
 - Zambo Pass: $29 for 30 days, one payment.
 - $ZAMBO holders: $19 for 30 days.

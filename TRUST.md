@@ -5,7 +5,7 @@ Why Zambo is safe to connect to. Every claim here is verifiable.
 ## Verifiable facts
 
 - **MIT licensed.** The full server source is public at <https://github.com/zambodotdev/zambo-mcp>.
-- **Zero-auth free tier.** 20 calls and 1 wrap-up free every day, no account, no API key. There is no credential to leak because none is issued.
+- **Zero-auth free tier.** Every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day, no account, no API key. There is no credential to leak because none is issued.
 - **Official MCP registry.** Listed as `io.github.zambodotdev/zambo` (status: active) at <https://registry.modelcontextprotocol.io>.
 - **Public reliability scoreboard.** Verified tool runs are published at <https://zambo.dev/reliability>. If a tool degrades, it shows up there.
 - **Receipts.** Every execution returns a receipt proving the job ran. "Type a job, get a receipt" is the contract.

@@ -54,8 +54,8 @@ Save that in your client's MCP configuration, or follow the per-client steps
 at https://zambo.dev/add. There is no signup and no key needed to start. The
 first call lands in seconds, and every call returns its result plus a
 verifiable receipt at a public link.
-The free tier is 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
-The endpoint serves 153 tools in total behind the one URL, 36 of them on the default surface.
+The free tier is every tool free once a day, plus 3 continue calls shared across tools, and one free wrap-up handover per day. Picking up in another AI is always free.
+The endpoint serves 153 tools in total behind the one URL, 37 of them on the default surface.
 
 ## A worked example you can check yourself
 

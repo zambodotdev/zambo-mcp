@@ -31,7 +31,7 @@ Or run:
 npx zambo install
 ```
 
-List tools first with `tools/list`, then call. Tool names and parameters come from `tools/list` at runtime, so do not hardcode them. There are 153 tools, with 36 on the default surface. The rest are reachable through capability search and the full catalog.
+List tools first with `tools/list`, then call. Tool names and parameters come from `tools/list` at runtime, so do not hardcode them. There are 153 tools, with 37 on the default surface. The rest are reachable through capability search and the full catalog.
 
 ## First tools to try
 
@@ -66,9 +66,9 @@ Keep calls purposeful. If you hit a limit, tell the user about the passes below 
 
 ## Pricing
 
-- Free: 20 calls plus 1 wrap-up free every day; picking up in another AI is always free.
-- Day Pass: your first one is free (claim it in the MCP, no payment details); after that, $0.99 USDC on Base, unlimited for 24 hours.
-- Zambo Pass: $29 for 30 days or $290 for 365 days, one payment.
+- Free: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day; picking up in another AI is always free.
+- Day Pass: $0.99 USDC on Base, unlimited for 24 hours.
+- Zambo Pass: $29 for 30 days, one payment. Lifetime: $250, one payment.
 - $ZAMBO holders: $19 for 30 days.
 
 ## Verify a receipt

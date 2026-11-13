@@ -23,6 +23,6 @@ Open that page and follow the steps for your app. It takes about a minute per ap
 
 ## Cost
 
-20 calls and 1 wrap-up free every day. Picking up in another AI is always free. A Day Pass is $0.99 for 24 hours when you want the full run of it.
+Every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free. A Day Pass is $0.99 for 24 hours when you want the full run of it.
 
 Check any receipt: https://zambo.dev/verify/

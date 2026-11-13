@@ -49,7 +49,7 @@ Add the endpoint to your client:
 
 Per-client steps are at https://zambo.dev/add. No signup, no key needed to
 start; the first call lands in seconds.
-The free tier is 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+The free tier is every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free.
 On the first session, note the handle the server
 issues and keep it with the project's own configuration. Then the loop is:
 

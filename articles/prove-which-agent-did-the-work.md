@@ -42,10 +42,10 @@ Custody will not tell you the work was good. It tells you whose work it was, wha
 
 ## Running your own jobs this way
 
-On Zambo, agents call one MCP endpoint, https://zambo.dev/mcp, with 153 tools in total and 36 on the default surface. Every call returns a verifiable AER-1 receipt, handovers move jobs between agents with the transfers recorded, and pickup in another AI is always free. Zambo is the verifiable work layer for AI: the tools do the work, the receipts keep custody of it. The free tier is 20 calls and 1 wrap-up free every day, and the Day Pass is $0.99 for 24 hours unlimited. The public receipt stream stands at 112,937 receipts as of today.
+On Zambo, agents call one MCP endpoint, https://zambo.dev/mcp, with 153 tools in total and 37 on the default surface. Every call returns a verifiable AER-1 receipt, handovers move jobs between agents with the transfers recorded, and pickup in another AI is always free. Zambo is the verifiable work layer for AI: the tools do the work, the receipts keep custody of it. The free tier is every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day, and the Day Pass is $0.99 for 24 hours unlimited. The public receipt stream stands at 112,937 receipts as of today.
 
 The full custody and acceptance procedure, step by step, lives at https://rambozambodotdev.gitlab.io/aer1-hub/agent-to-agent-handover.html
 
 Build the chain before the dispute. After it starts, the only chain you can build is the one that was already there.
 
-Add Zambo to your agent: https://zambo.dev/add/ (20 calls and 1 wrap-up free every day; picking up in another AI is always free).
+Add Zambo to your agent: https://zambo.dev/add/ (every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day; picking up in another AI is always free).

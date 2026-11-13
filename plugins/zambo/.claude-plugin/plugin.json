@@ -1,7 +1,7 @@
 {
   "name": "zambo",
   "displayName": "Zambo",
-  "description": "The verifiable work layer for AI. 153 tools behind one keyless MCP endpoint, HANDOVER continuity across AIs (wrap up in one AI, pick up in another), and a verifiable AER-1 receipt for every call that anyone can check at zambo.dev/verify. Free: 20 calls and 1 wrap-up every day; picking up is always free.",
+  "description": "The verifiable work layer for AI. 153 tools behind one keyless MCP endpoint, HANDOVER continuity across AIs (wrap up in one AI, pick up in another), and a verifiable AER-1 receipt for every call that anyone can check at zambo.dev/verify. Free: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day; picking up is always free.",
   "version": "4.1.1",
   "author": {
     "name": "Brennan Zambo",

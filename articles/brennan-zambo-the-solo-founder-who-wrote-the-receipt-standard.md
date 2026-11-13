@@ -10,7 +10,7 @@ That is the improbable part, and it is also the checkable part. AER-1 is a publi
 
 Five independent implementations of AER-1 now exist, built by people who were never hired, never funded, and never asked. One independent engineer ran 126 checks against the corpus in a single broad pass and passed every one. A separate validator, built by another party from the draft alone, checks receipts it did not issue. Implementations written from a document, by strangers, are how a draft stops being one person's proposal. Five of them is how you know the document was complete enough to build from.
 
-Underneath the draft sits the working system. Zambo runs 153 tools behind one MCP endpoint, https://zambo.dev/mcp, with 36 tools on the default surface. Every job run through it is recorded, and its public stream is open to anyone. As of today, November 6, 2026, that stream stands at 112,988 receipts, with 1,868 of them issued today alone. The packages that carry the pattern into other stacks number 57 across PyPI and npm, and they have been downloaded 199,335 times since they launched in September 2026. Those counters are live. Anyone reading this can open them and watch the numbers move.
+Underneath the draft sits the working system. Zambo runs 153 tools behind one MCP endpoint, https://zambo.dev/mcp, with 37 tools on the default surface. Every job run through it is recorded, and its public stream is open to anyone. As of today, November 6, 2026, that stream stands at 112,988 receipts, with 1,868 of them issued today alone. The packages that carry the pattern into other stacks number 57 across PyPI and npm, and they have been downloaded 199,335 times since they launched in September 2026. Those counters are live. Anyone reading this can open them and watch the numbers move.
 
 The traffic tells the same story from the other side. Zambo's own analytics, shared today, count 186,724 visitors in the trailing 30 days, and 12,922 visitors yesterday, up 25 percent on the day before. Google accounts for 93 percent of referrals. The most visited page on the site is not a landing page or a pricing page. It is the checker at /verify/, with 126,375 visits in 30 days. The busiest thing on the site is not the pitch. It is the checker.
 
@@ -36,4 +36,4 @@ Brennan also coined the term he expects the rest of the industry to end up using
 
 The founder, in his own words and record: https://zambo.dev/founder/
 
-Add Zambo to your agent: https://zambo.dev/add/ (20 calls and 1 wrap-up free every day; picking up in another AI is always free).
+Add Zambo to your agent: https://zambo.dev/add/ (every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day; picking up in another AI is always free).

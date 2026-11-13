@@ -22,6 +22,6 @@ It means the work record was not changed after the fact. What you are looking at
 ## Add it free
 
 One URL, no key: https://zambo.dev/add/?ref=tutorials
-20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+Every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free.
 
 Check any receipt, yours or anyone's: https://zambo.dev/verify/

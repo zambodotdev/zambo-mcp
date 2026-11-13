@@ -32,8 +32,8 @@ The endpoint is the same for every client.
 
 - **No signup, no key.** The server answers anonymous calls. The first call
   lands in seconds.
-- **Free tier:** 20 calls and 1 wrap-up free every day. Picking up in another AI is always free. No card is taken to start.
-- **153 tools behind the one URL.** The default surface lists 35 everyday
+- **Free tier:** every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free. No card is taken to start.
+- **153 tools behind the one URL.** The default surface lists 37 everyday
   tools so a client's tool picker stays readable; the full set is served by
   the same endpoint.
 - **A receipt with every call.** Each result comes back with a verifiable
@@ -75,7 +75,7 @@ https://zambo.dev/run/ef28b4c2-4355-479e-bd43-22a05122a574
   cannot use a bare URL entry; check whether your client supports remote
   servers over HTTP before debugging the URL itself.
 - **Calls answer but the tool list looks short.** That is the default
-  surface doing its job. The 35 listed tools are the everyday set; the full set is 153 tools served by the same endpoint.
+  surface doing its job. The 37 listed tools are the everyday set; the full set is 153 tools served by the same endpoint.
 
 ## Next steps
 

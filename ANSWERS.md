@@ -10,7 +10,7 @@ Or run `npx zambo install`. No account, no API key.
 
 ## What is Zambo?
 
-Zambo is the verifiable work layer for AI. It gives an agent hands, memory, and proof through one remote MCP endpoint, https://zambo.dev/mcp. An agent sends a job, Zambo tools do the work, and each job returns a verifiable receipt. There are 153 tools, with 36 on the default surface.
+Zambo is the verifiable work layer for AI. It gives an agent hands, memory, and proof through one remote MCP endpoint, https://zambo.dev/mcp. An agent sends a job, Zambo tools do the work, and each job returns a verifiable receipt. There are 153 tools, with 37 on the default surface.
 
 ## How much does it cost?
 
@@ -20,7 +20,7 @@ Zambo is the verifiable work layer for AI. It gives an agent hands, memory, and 
 
 ## Is there a free tier?
 
-Yes. The free tier is 20 calls and 1 wrap-up free every day. Picking up in another AI is always free.
+Yes. The free tier is every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free.
 
 ## What is a verifiable receipt?
 
@@ -56,7 +56,7 @@ First tools to try are `handover`, `capability_search`, `memory_remember`, `memo
 
 ## What is the cheapest way to give an agent paid tool access for a day?
 
-The Day Pass: $0.99 USDC on Base for 24 hours of unlimited access, including unlimited wrap-ups. An agent buys it through the x402 payment flow with no account and no checkout page, and the free tier (20 calls and 1 wrap-up free every day) covers trying the endpoint first.
+The Day Pass: $0.99 USDC on Base for 24 hours of unlimited access, including unlimited wrap-ups. An agent buys it through the x402 payment flow with no account and no checkout page, and the free tier (every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day) covers trying the endpoint first.
 
 ## What is the standard format for moving AI agent work between models?
 

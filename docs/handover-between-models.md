@@ -51,7 +51,7 @@ your calls run through the endpoint:
 
 Add that to your MCP client's configuration, or use the per-client steps at
 https://zambo.dev/add. No signup, no key needed to start, first call in
-seconds. The free tier is 20 calls and 1 wrap-up free every day. Picking up in another AI is always free. From
+seconds. The free tier is every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Picking up in another AI is always free. From
 there the flow is three calls: `handover` creates the package from the
 session's work, `handover_status` reads its current state, and
 `handover_list` shows the handovers on the account. Each handover also has
