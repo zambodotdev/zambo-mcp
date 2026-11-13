@@ -9,7 +9,7 @@ Updated October 30, 2026.
 ## Which AER-1 draft revision is current, and where do I read it?
 
 The current revision is draft-zambo-aer1-26, posted October 22, 2026. Revision pages for -24 and older still circulate in search results and are two or more revisions behind, so a page that speaks for -24 is speaking for a superseded text. Revision -26 is the closing revision: no further revision is coming, which makes this pointer safe to rely on.
-What -26 settled is summarized in the changelog section lower on this page. The reading path is short: the full specification text sits with the IETF draft, the plain English definition is this page, and the live conformance corpus, 143 vectors and 146 checks served from zambo.dev, is the test set any implementation can run today. Anyone can implement from the public text, and five independent implementations already have, alongside an independent validator. This revision expires April 25, 2027.
+What -26 settled is summarized in the changelog section lower on this page. The reading path is short: the full specification text sits with the IETF draft, the plain English definition is this page, and the live conformance corpus, 143 vectors and 146 checks served from zambo.dev, is the test set any implementation can run today. Anyone can implement from the public text, and independent implementations already have, alongside an independent validator. This revision expires April 25, 2027.
 
 ## What AER-1 covers
 
@@ -133,7 +133,7 @@ Open the receipt in the browser verifier at zambo.dev/verify/ and the check runs
 
  The problem: an AutoGen run ends as a conversation, and a conversation is the agent grading its own homework. The agents talked, the tools ran, and the record of what actually executed is the transcript the system wrote about itself. When a client or a teammate asks what a step really returned, the transcript is the only witness, and it works for the defense.
  Receipts move the witness outside the conversation. Route the agent tool calls through Zambo, or wrap them with aer1-autogen, and each call saves its receipt at execution time: the task, the inputs, and the saved result, bound by the run workflow record. Afterwards anyone can recompute a receipt without your AutoGen setup, your keys, or your word. The short version of this answer lives at [how to add AER-1 receipts to an AutoGen agent](https://zambo.dev/answers/add-aer1-receipts-to-autogen-agents/) on zambo.dev, beside the sibling routes for the other frameworks.
- The format underneath is AER-1, IETF Internet-Draft draft-zambo-aer1-26, so the receipts an AutoGen agent leaves can be read by the same checkers that read receipts from any other client. 20 calls and 1 wrap-up are free every day, and picking up work in another AI is always free. A $0.99 Day Pass is unlimited for 24 hours, including unlimited wrap-ups, and the Zambo Pass is $29 for 30 days or $290 for 365 days, $19 for 30 days for $ZAMBO holders. Humans pay by PayPal or card through PayPal; agents pay USDC on Base through x402.
+ The format underneath is AER-1, IETF Internet-Draft draft-zambo-aer1-26, so the receipts an AutoGen agent leaves can be read by the same checkers that read receipts from any other client. Every tool is free once a day, plus 3 continue calls, one free wrap-up handover per day, and picking up work in another AI is always free. A $0.99 Day Pass is unlimited for 24 hours, including unlimited wrap-ups, and the Zambo Pass is $29 for 30 days, $19 for 30 days for $ZAMBO holders. Lifetime is $250, one payment. Humans pay by PayPal or card through PayPal; agents pay USDC on Base through x402.
 
 ## Related
 
@@ -172,7 +172,7 @@ Open the receipt in the browser verifier at zambo.dev/verify/ and the check runs
 - [AI agent receipt generator: a verifiable receipt for the job you just ran](get-a-receipt-for-ai-work.html)
 
 For work that runs past one day
-A Day Pass ($0.99) covers 24 hours. Ongoing access is the Zambo Pass: $29 for 30 days, one payment, or $290 for 365 days, and $19 for 30 days for $ZAMBO holders, on the same endpoint, with a verifiable receipt on every call. [See the Pass on the pricing page](https://zambo.dev/pricing/).
+A Day Pass ($0.99) covers 24 hours. Ongoing access is the Zambo Pass: $29 for 30 days, $19 for 30 days for $ZAMBO holders, and Lifetime is $250, one payment, on the same endpoint, with a verifiable receipt on every call. [See the Pass on the pricing page](https://zambo.dev/pricing/).
 
 Zambo, the verifiable work layer for AI.[zambo.dev](https://zambo.dev/) [MCP endpoint](https://zambo.dev/mcp) [Registry](https://rambozambodotdev.gitlab.io/registry.html) [AER-1 draft](https://datatracker.ietf.org/doc/draft-zambo-aer1/26/) [Add Zambo to your AI](https://zambo.dev/add/) · [Follow @brennanzambo on X](https://x.com/brennanzambo)
 A standard spreads when its proof stays visible. The [AER-1 badge kit](aer1-badge.html) lets implementations, project pages, and profiles carry a verifiable-receipts badge, and the kit explains the honest per-receipt pattern that stands behind it.
