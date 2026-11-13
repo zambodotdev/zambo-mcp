@@ -4,7 +4,7 @@ Every agent job I watch starts the same way: a blank prompt, a capable model, an
 
 That cold start is the problem the new Zambo task guides exist to kill. Today zambo.dev shipped 64 task guides holding 2,048 task-specific starter recipes at [zambo.dev/workflows/tasks/](https://zambo.dev/workflows/tasks/). A starter is not a prompt tip and it is not a template with blanks. It is a ready job: the inputs named up front, a copyable prompt written for that exact task, an output checklist, review checks, stop conditions, and a JSON recipe, each starter with its own direct anchor link so you can send someone the exact job, not the page it lives on.
 
-I built Zambo solo, and I built these guides the way I build everything here: if a claim cannot be checked, it does not ship. At verification this morning the public stream stood at 128,922 public receipts, 1,583 of them that day, on version 4.1.0, with 153 tools behind one endpoint and 36 on the default surface.
+I built Zambo solo, and I built these guides the way I build everything here: if a claim cannot be checked, it does not ship. At verification this morning the public stream stood at 128,922 public receipts, 1,583 of them that day, on version 4.1.0, with 153 tools behind one endpoint and 37 on the default surface.
 
 ## What a starter actually contains
 
@@ -41,8 +41,8 @@ That is what a verifiable receipt means here, and it is worth stating plainly: a
 
 One endpoint: https://zambo.dev/mcp . Add it to your AI and the guides, the workflows, and all 153 tools are behind it, every call returning a verifiable AER-1 receipt.
 
-Pricing, in one paragraph: the free tier is 20 calls plus 1 wrap-up free every day, and picking up in another AI is always free. The Day Pass is $0.99 for 24 hours. The Zambo Pass is $29 for 30 days, $19 for 30 days for $ZAMBO holders. Lifetime is $250, one payment. There is no annual tier.
+Pricing, in one paragraph: the free tier is every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day, and picking up in another AI is always free. The Day Pass is $0.99 for 24 hours. The Zambo Pass is $29 for 30 days, $19 for 30 days for $ZAMBO holders. Lifetime is $250, one payment. There is no annual tier.
 
 Start from a job, not a blank prompt: [zambo.dev/workflows/tasks/](https://zambo.dev/workflows/tasks/)
 
-Brennan Zambo, founder of Zambo, the verifiable work layer for AI.
+Brennan Zambo, creator of AER-1 and founder of Zambo (zambo.dev), the verifiable work layer for AI: https://zambo.dev/founder/
