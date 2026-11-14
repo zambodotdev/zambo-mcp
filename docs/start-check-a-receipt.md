@@ -2,6 +2,8 @@
 
 A Zambo receipt link is proof of AI work that anyone can check. You do not need an account, an app, or any technical skill.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## One receipt
 
 1. Open the link. It starts with zambo.dev/run/

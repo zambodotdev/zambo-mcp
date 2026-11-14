@@ -2,6 +2,8 @@
 
 You are talking to one AI and you want to switch to a different one. Normally you would have to explain everything again from zero. With Zambo added, you do not.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## Do this
 
 1. In the AI you are leaving, say: "Use Zambo to wrap up my session."

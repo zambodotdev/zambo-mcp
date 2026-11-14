@@ -12,6 +12,8 @@ builds that record from the receipts the work leaves when it runs through a
 recording layer, and scopes every claim to what the record actually
 covers.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## What the record shows
 
 - **The work existed, in this form, at this time.** Each call that produced

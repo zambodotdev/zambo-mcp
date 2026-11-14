@@ -2,6 +2,8 @@
 
 Zambo works inside the AI apps you already use. You add it once per app, with one URL and no key, and from then on that AI has tools, a memory it can share with your other AIs, and receipts for its work.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## The one link you need
 
 https://zambo.dev/add/?ref=tutorials

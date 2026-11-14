@@ -4,6 +4,8 @@ The hard part of client work is not doing it. It is proving it is done, in a way
 
 Zambo's handover does that in one link.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## Do this
 
 1. Finish the work with your AI like you normally would.

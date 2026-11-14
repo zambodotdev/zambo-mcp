@@ -6,6 +6,8 @@ unless something outside the session kept it. Pasting a transcript into
 the next chat is the usual workaround, and it degrades exactly like a
 retelling: long, lossy, and reworded a little more each time.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 Continuity means the facts survive the session boundary as data. This
 guide covers the model Zambo uses: a server-side memory addressed by a
 caller handle, readable from any later session, including a session on a

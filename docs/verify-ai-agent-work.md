@@ -10,6 +10,8 @@ This guide is the method. It works on paper with any tooling.
 On Zambo, the verifiable work layer for AI, every call already leaves the record this method needs.
 But read the steps first and judge the method on its own.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## The method, in five steps
 
 1. **Record every call.** For each tool call the agent makes, save the inputs

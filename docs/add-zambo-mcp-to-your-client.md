@@ -6,6 +6,8 @@ entry to your MCP client, restart or reload the client, and call a tool.
 This page is the whole procedure, plus how to confirm it worked and what to
 check when it does not.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## The configuration
 
 ```json

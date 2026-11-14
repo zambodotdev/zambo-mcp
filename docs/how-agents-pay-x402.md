@@ -7,6 +7,8 @@ x402 is the HTTP-native answer. The server answers the unpaid call with a
 pays exactly that, retries the call with proof of payment attached, and the
 call proceeds. No accounts department, no redirect, no form.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 This page walks the Zambo implementation end to end: what the 402 says,
 what the buyer sends, what the buyer gets, and what happens if the same
 payment is sent twice.

@@ -7,6 +7,8 @@ what state the work is actually in. The new model re-derives some of it,
 contradicts some of it, and asks about the rest. The thread is not the
 conversation. The thread is the work.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 A handover is the fix: a structured package that carries the work itself,
 not a retelling of it. This guide describes what belongs in one and how the
 handover flow runs, with and without tooling.

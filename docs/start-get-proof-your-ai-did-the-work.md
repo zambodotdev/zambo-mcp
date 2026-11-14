@@ -2,6 +2,8 @@
 
 Your AI says "done." Done how? Did it really do the thing, or does it just sound sure of itself? With Zambo, every job comes with a receipt you can open and check yourself.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## Do this
 
 1. Give your AI a job like you normally would.
