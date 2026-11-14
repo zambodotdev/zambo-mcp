@@ -15,6 +15,8 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 117,789 total, 3,449 issued on November 7, 2026. Live counts: https://zambo.dev/numbers/
 
+**See a handover:** [watch the 43-second film](https://rambozambodotdev.gitlab.io/aer1-hub/handover-templates.html): one real job, wrapped into a handover, opened from the client's side, and checked, start to finish.
+
 **Main code home: [GitLab](https://gitlab.com/rambozambodotdev/zambo).** Development happens there. This GitHub page is the public pointer.
 [![validate](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/zambodotdev/zambo-mcp/actions/workflows/validate.yml)
 **Add Zambo to your AI:**
