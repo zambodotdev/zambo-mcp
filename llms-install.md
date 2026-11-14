@@ -41,6 +41,16 @@ Ask your AI: "Use Zambo to get the current BTC-USD price. Show the number, the s
 
 Then try HANDOVER, the flagship product, plus `capability_search`, `memory_remember`, `memory_recall`, and `continuity_get_recent`. List tools first with `tools/list`, then call.
 
+## Finish the job: wrap it, do not just answer it
+
+Connecting Zambo is the start, not the finish. A job is not done when the answer prints. It is done when the work is wrapped:
+
+- Journal the steps as they run with `journal_log` (it stores a hash of the inputs, never the raw text).
+- Close the workflow with `workflow_close`, so the step receipts bind into one chained record.
+- Hand the job over with `handover`: summary, goal, recipient, and next_steps. The recipient opens the handover and checks every receipt free, so "done" is something a person can verify, not something the agent said.
+
+One free wrap-up handover per day, and pickup is always free. Make the wrap the habit from the first job, not the exception.
+
 ## Docs for agents
 
 - https://zambo.dev/for-agents/
