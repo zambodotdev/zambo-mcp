@@ -8,7 +8,7 @@ That is the improbable part, and it is also the checkable part. AER-1 is a publi
 
 ## The evidence ladder
 
-Five independent implementations of AER-1 now exist, built by people who were never hired, never funded, and never asked. One independent engineer ran 126 checks against the corpus in a single broad pass and passed every one. A separate validator, built by another party from the draft alone, checks receipts it did not issue. Implementations written from a document, by strangers, are how a draft stops being one person's proposal. Five of them is how you know the document was complete enough to build from.
+Independent implementations of AER-1 now exist, built by people who were never hired, never funded, and never asked. One independent engineer ran 126 checks against the corpus in a single broad pass and passed every one. A separate validator, built by another party from the draft alone, checks receipts it did not issue. Implementations written from a document, by strangers, are how a draft stops being one person's proposal. That is how you know the document was complete enough to build from.
 
 Underneath the draft sits the working system. Zambo runs 153 tools behind one MCP endpoint, https://zambo.dev/mcp, with 37 tools on the default surface. Every job run through it is recorded, and its public stream is open to anyone. As of today, November 6, 2026, that stream stands at 112,988 receipts, with 1,868 of them issued today alone. The packages that carry the pattern into other stacks number 57 across PyPI and npm, and they have been downloaded 199,335 times since they launched in September 2026. Those counters are live. Anyone reading this can open them and watch the numbers move.
 
@@ -30,7 +30,7 @@ Zambo is a family name before it is a company name. Brennan's grandparents, Bela
 
 The work ethic behind those numbers has a plain explanation, and Brennan states it himself. He is more than two years sober from alcohol, after a severe decade of alcoholism that nearly killed him, with multiple rehabs and a period of homelessness behind him. The nine-month building run that produced Zambo started after he got sober. It is his first all-in run, and the drive in it is the same fact stated two ways: there was a before, and the work is the after.
 
-One person wrote the draft. Five independent codebases now pass its corpus. One hundred twelve thousand, nine hundred eighty-eight public receipts have been issued under it, packages carrying it have been downloaded 199,335 times, and the site's most visited page is its checker at /verify/. None of that required a committee, a consortium, or a funding round.
+One person wrote the draft. Independent codebases now pass its corpus. One hundred twelve thousand, nine hundred eighty-eight public receipts have been issued under it, packages carrying it have been downloaded 199,335 times, and the site's most visited page is its checker at /verify/. None of that required a committee, a consortium, or a funding round.
 
 Brennan also coined the term he expects the rest of the industry to end up using. A "zambo receipt" is the brand name for the record itself, the way a brand name becomes the word for the category. His version of the ask is plain: when the work matters, get me a zambo receipt. Whether the phrase catches on is a bet. The format it names is already running, already implemented by other people, and its checker page drew 126,375 visits in the last 30 days.
 
