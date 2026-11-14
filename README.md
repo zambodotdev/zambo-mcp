@@ -11,7 +11,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
-**Free tier:** every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.. Day Pass: $0.99 for unlimited use for 24 hours.
+**Free tier:** every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
 **Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 117,789 total, 3,449 issued on November 7, 2026. Live counts: https://zambo.dev/numbers/
 
@@ -54,9 +54,9 @@ Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No A
 
 Paste this into any AI that has Zambo connected:
 
-> Get the live BTC price with Zambo, then give me the receipt link so I can check the work.
+"Use Zambo to check the live price of every asset on this watchlist, one call each: BTC, ETH, SOL, and the other assets you follow. Save the run to memory, then wrap it into a handover addressed to me, with the receipt link for every call in your reply."
 
-Open the link it gives you. The receipt shows the exact saved result and its sha-256 digest, so you can check the work instead of trusting the answer. You can also paste any receipt link at [zambo.dev/verify](https://zambo.dev/verify/).
+Open the handover link it gives you. Every price in the run carries its own receipt: the exact saved result and its SHA-256 digest, so you can check the work instead of trusting the answers. One price is a lookup, and a lookup is free once a day. A watchlist checked end to end is a job: the same tool run per item, a record that chains, and a wrap a person can open. Six assets is six calls to the same tool, so the free tier starts the run and a Day Pass ($0.99, unlimited for 24 hours) finishes it in one sitting. You can also paste any receipt link at zambo.dev/verify/.
 
 ## First move: HANDOVER
 
@@ -70,7 +70,7 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 
 ## Pricing
 
-Free tier: every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free..
+Free tier: every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.
 Day Pass: $0.99, unlimited for 24 hours.
 Zambo Pass: $29 for 30 days. $ZAMBO holders: $19 for 30 days. Lifetime Pass: $250, one payment.
 Agents pay with USDC on Base through x402. Humans pay by card or PayPal.

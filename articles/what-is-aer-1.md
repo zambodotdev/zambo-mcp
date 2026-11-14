@@ -3,7 +3,7 @@
 # AER-1
 
 AER-1 is an open IETF Internet-Draft for recording one agent tool call as a portable, checkable receipt. Any tool can produce an AER-1 receipt, any other party can check it with no account, and the check proves the saved result was not changed after the fact. This page is the definition: what AER-1 covers, the core fields, the verification procedure, the conformance kit and its implementers, and what changed in the latest draft, revision 26. AER-1 was created by Brennan Zambo, founder of Zambo, the verifiable work layer for AI.
-See one in your hands: [the live demo](https://zambo.dev/demo/) runs one real call and hands you its verifiable AER-1 receipt, no signup. Check any receipt free at [zambo.dev/verify/](https://zambo.dev/verify/).
+See a chain of them in your hands: a four-agent job that ran entirely on AER-1 receipts is public at [zambo.dev/handover/a154789b-0588-43c7-a31c-d108eb59406b](https://zambo.dev/handover/a154789b-0588-43c7-a31c-d108eb59406b), and any receipt on it checks free at [zambo.dev/verify/](https://zambo.dev/verify/).
 Updated October 30, 2026.
 
 ## Which AER-1 draft revision is current, and where do I read it?

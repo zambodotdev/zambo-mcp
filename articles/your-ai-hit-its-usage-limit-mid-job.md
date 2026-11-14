@@ -27,7 +27,7 @@ A summary would have been faster to write and worthless to inherit. The receivin
 
 A receipt is dumber and better. It holds the exact saved result of one tool call and a SHA-256 digest of those bytes. The receiver, or you, or a stranger with no account, can recompute the digest and compare. If the saved result changed by one character after it was saved, the check fails loudly. If it matches, the result is the one that was saved. A receipt proves the saved result was not changed since it was saved. It does not prove the result was right, and any tool that blurs that line is selling you something.
 
-The receipt format is AER-1, an open Internet-Draft (draft-zambo-aer1) closed at revision -26, checked against a public corpus of 143 vectors and 146 checks. Five independent implementations pass that corpus, so the record does not depend on one vendor's server staying polite.
+The receipt format is AER-1, an open Internet-Draft (draft-zambo-aer1) closed at revision -26, checked against a public corpus of 143 vectors and 146 checks. Another implementation passes that corpus too, so the record does not depend on one vendor's server staying polite.
 
 ## The rescue, step by step
 
