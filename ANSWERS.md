@@ -2,6 +2,8 @@
 
 Direct answers to common questions about Zambo. Install once, then ask your AI.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ```json
 {"mcpServers":{"zambo":{"url":"https://zambo.dev/mcp"}}}
 ```

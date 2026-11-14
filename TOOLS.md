@@ -2,6 +2,8 @@
 
 Zambo is the verifiable work layer for AI. Endpoint: https://zambo.dev/mcp
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ```json
 {"mcpServers":{"zambo":{"url":"https://zambo.dev/mcp"}}}
 ```
