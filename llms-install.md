@@ -2,6 +2,8 @@
 
 Zambo is the verifiable work layer for AI: 153 tools behind one remote MCP endpoint, with continuity across AIs and a verifiable AER-1 receipt for every job. No API key, no account, no environment variables.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 Endpoint: https://zambo.dev/mcp
 
 ## Option A - config JSON (Claude, Cursor, Windsurf, Cline, and other MCP clients)

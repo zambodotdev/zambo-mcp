@@ -65,7 +65,7 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 ## What you get
 
 - Continuity: memory and sessions that persist across calls, clients, and models. Wrap up a session in one AI and continue it in any other with a code; picking up is always free.
-- Tools: 153 behind one endpoint. Research, data, documents, media, payments, and more.
+- Tools: 153 in total, 37 on the default surface, behind one endpoint. Research, data, documents, media, payments, and more.
 - Proof: every call returns a verifiable AER-1 receipt. A receipt proves the saved result was not changed after it was saved.
 
 ## Pricing

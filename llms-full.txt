@@ -2,8 +2,10 @@
 
 > Zambo is the verifiable work layer for AI: 153 tools behind one remote MCP endpoint (https://zambo.dev/mcp), memory and continuity across AIs, HANDOVER for passing work between AIs or to a client as one link, and a verifiable AER-1 receipt for every job.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 Connect: claude mcp add --transport http zambo https://zambo.dev/mcp  |  npx zambo install  |  or tell your AI: read https://zambo.dev/add/ and add Zambo.
-Free tier: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Day Pass $0.99 for 24 hours. Zambo Pass $29 for 30 days ($19 for $ZAMBO holders). Agents pay USDC on Base via x402; humans pay by card or PayPal.
+Free tier: every tool free once a day, plus 3 continue calls, and one free wrap-up handover per day. Day Pass $0.99 for 24 hours. Zambo Pass $29 for 30 days ($19 for $ZAMBO holders). Lifetime Pass $250, one payment. Agents pay USDC on Base via x402; humans pay by card or PayPal.
 Verify any receipt: https://zambo.dev/verify/
 Main code home: https://gitlab.com/rambozambodotdev/zambo  |  AER-1 standard: https://github.com/zambodotdev/aer-1 (IETF draft-zambo-aer1-26)
 
@@ -18,7 +20,7 @@ Main code home: https://gitlab.com/rambozambodotdev/zambo  |  AER-1 standard: ht
 - memory_recall: Read private saved facts for this work connection, optionally matching a query. Free, no quota. Required arguments: _session_id.
 - spend_limit_set: Set this work connection's daily and optional monthly dollar cap before further Day Pass payments. Free, no quota. Required arguments: _session_id, daily_usd.
 - spend_limit_status: Read this work connection's spending cap, paid charges and remaining budget. Free, no quota. Required arguments: _session_id.
-- journal_log: Free anonymous or authenticated append-only log for an action performed outside Zambo. The entry is recorded as an agent-reported claim; Zambo does not claim it ran or observed the action. Limited to 20 calls per IP p...
+- journal_log: Free anonymous or authenticated append-only log for an action performed outside Zambo. The entry is recorded as an agent-reported claim; Zambo does not claim it ran or observed the action. Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.
 - secondary_receipt: Create a secondary receipt for work performed outside Zambo. Evidence is scored conservatively; submission is not independent witnessing. Required arguments: output.
 - video_create: Create a ZAMBO Video generation through the Video Engine. This is consequential external generation: first obtain the user's explicit confirmation by calling with confirm:true. Requires a video access token obtained f...
 - video_status: Read honest ZAMBO Video Engine capabilities or the current status of an owned generation. Returns provider-reported state only; no fabricated outputs or progress.

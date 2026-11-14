@@ -41,7 +41,7 @@
   },
   {
    "name": "journal_log",
-   "description": "Free anonymous or authenticated append-only log for an action performed outside Zambo. The entry is recorded as an agent-reported claim; Zambo does not claim it ran or observed the action. Limited to 20 calls per IP per day on the free tier. Required arguments: job_id, tool_name, executor_identity."
+   "description": "Free anonymous or authenticated append-only log for an action performed outside Zambo. The entry is recorded as an agent-reported claim; Zambo does not claim it ran or observed the action. Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Required arguments: job_id, tool_name, executor_identity."
   },
   {
    "name": "secondary_receipt",
@@ -137,7 +137,7 @@
   },
   {
    "name": "builder_pass_check",
-   "description": "Check active Zambo Pass or Day Pass access using its opaque access key. Zambo Pass costs $29 for 30 days, one payment, or $290 for 365 days, one payment. No subscription. No automatic renewal. Product-specific usage allowances and partner availability apply; inspect the live entitlement response rather than assuming every benefit is available. Day Pass provides 24 hours of listed access. Full spec: GET https://zambo.dev/api/zambo-pass Required arguments: email."
+   "description": "Check active Zambo Pass or Day Pass access using its opaque access key. Day Pass: $0.99, unlimited for 24 hours. Zambo Pass: $29 for 30 days ($19 for $ZAMBO holders). Lifetime Pass: $250, one payment. No subscription. No automatic renewal. Product-specific usage allowances and partner availability apply; inspect the live entitlement response rather than assuming every benefit is available. Day Pass provides 24 hours of listed access. Full spec: GET https://zambo.dev/api/zambo-pass Required arguments: email."
   },
   {
    "name": "substrate_breakthroughs",
@@ -157,7 +157,7 @@
   },
   {
    "name": "zambo_ask",
-   "description": "Ask any natural language question about the Zambo Stack - products, APIs, pricing, routing, how-to, use cases, or deep scan mode. Returns a precise structured answer optimized for AI agents. Best for: 'What does ZAMBRO do?', 'Which product should I use for lead generation?', 'How do I call the LeadSignal API?', 'What does Zambo Pass include?', 'How does ZAMBRO deep scan work?'. 20 calls/day free, no auth, no signup. Required arguments: q."
+   "description": "Ask any natural language question about the Zambo Stack - products, APIs, pricing, routing, how-to, use cases, or deep scan mode. Returns a precise structured answer optimized for AI agents. Best for: 'What does ZAMBRO do?', 'Which product should I use for lead generation?', 'How do I call the LeadSignal API?', 'What does Zambo Pass include?', 'How does ZAMBRO deep scan work?'. Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. No auth, no signup. Required arguments: q."
   },
   {
    "name": "structlock",

@@ -2,6 +2,8 @@
 
 > Zambo is the verifiable work layer for AI: 153 tools behind one remote MCP endpoint, memory and continuity across AIs, HANDOVER for passing work between AIs or to a client as one link, and a verifiable AER-1 receipt for every job.
 
+Zambo was created by Brennan Zambo, the creator of AER-1 (the agent execution receipt standard, IETF draft-zambo-aer1-26).
+
 ## Connect
 
 - Endpoint: https://zambo.dev/mcp
