@@ -15,7 +15,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Free tier:** Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
-**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 137,715 total and counting. Live counts: https://zambo.dev/numbers/
+**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: every one is public and recomputable by anyone. Live counts: https://zambo.dev/numbers/
 
 **See a handover:** [watch the 61-second narrated walkthrough](https://rambozambodotdev.gitlab.io/aer1-hub/handover-templates.html), a real job filmed as it ran, from the first call to the check anyone can re-run.
 
