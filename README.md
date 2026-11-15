@@ -13,7 +13,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 [Add Zambo](https://zambo.dev/add/) · [Verify a receipt](https://zambo.dev/verify/) · [Day Pass](https://zambo.dev/day-pass/) · [Founder](https://zambo.dev/founder/)
 
-**Free tier:** every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
+**Free tier:** Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
 **Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 137,715 total and counting. Live counts: https://zambo.dev/numbers/
 
@@ -95,7 +95,7 @@ HANDOVER is the front door: hand work from one AI to another, or to a client, as
 
 ## Pricing
 
-Free tier: every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.
+Free tier: Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free.
 Day Pass: $0.99, unlimited for 24 hours.
 Zambo Pass: $29 for 30 days. $ZAMBO holders: $19 for 30 days. Lifetime Pass: $250, one payment.
 Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
@@ -108,7 +108,7 @@ The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.5.7),
 
 ## Independent baseline
 
-Dominion Observatory, an independent watcher of MCP tool manifests, captured the default 35-tool surface of https://zambo.dev/mcp on 2026-10-30 and published the record in [issue #5](https://github.com/zambodotdev/zambo-mcp/issues/5#issuecomment-6511599676). Manifest SHA-256: `4520aa4d5cbb8f26913c3e358ed258bf4db24678f28be4aab8875d758e426ca7`. The full 153-tool catalog is a separate surface (add ?full=true to the endpoint) and is not part of that baseline. Anyone can fetch the live manifest and compare it against the outside record.
+Dominion Observatory, an independent watcher of MCP tool manifests, captured the default 35-tool surface of https://zambo.dev/mcp on 2026-10-30 and published the record in [issue #5](https://github.com/zambodotdev/zambo-mcp/issues/5#issuecomment-6511599676). Manifest SHA-256: `4520aa4d5cbb8f26913c3e358ed258bf4db24678f28be4aab8875d758e426ca7`. The full 153-tool catalog is a separate surface (add ?full=true to the endpoint) and is not part of that baseline. The default surface has since grown to 37 tools; the 35-tool record stays as captured. Anyone can fetch the live manifest and compare it against the outside record.
 
 ## Built by
 
