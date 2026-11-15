@@ -30,11 +30,30 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 [![Add to Gemini](https://img.shields.io/badge/Add_to-Gemini-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-gemini)
 [![Add to Grok](https://img.shields.io/badge/Add_to-Grok-0b0e14?style=for-the-badge&color=5eead4)](https://zambo.dev/add/?ref=readme-grok)
 
-## Add it
+## Add Zambo in one command
+
+Claude Code:
+
+```bash
+claude mcp add zambo --transport http https://zambo.dev/mcp
+```
+
+Stdio clients:
+
+```bash
+npx zambo-mcp
+```
+
+For Cursor, Cline, VS Code and other clients, follow the per-client connector steps at https://zambo.dev/install/
+
+**One click:** [Install in VS Code](https://vscode.dev/redirect/mcp-install?name=zambo&config=%7B%22url%22%3A%22https%3A//zambo.dev/mcp%22%7D) · [Install in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9tY3AifQ==)
 
 Tell your AI: "Add Zambo from https://zambo.dev/mcp"
 
-Or paste the config:
+Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No API key. No signup.
+
+<details>
+<summary>Raw JSON config</summary>
 
 ```json
 {
@@ -46,13 +65,15 @@ Or paste the config:
 }
 ```
 
-**Claude Code:** `claude mcp add --transport http zambo https://zambo.dev/mcp`
+</details>
 
-**One command:** `npx zambo install`
+## Verify your first receipt
 
-**One click:** [Install in VS Code](https://vscode.dev/redirect/mcp-install?name=zambo&config=%7B%22url%22%3A%22https%3A//zambo.dev/mcp%22%7D) · [Install in Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=zambo&config=eyJ1cmwiOiJodHRwczovL3phbWJvLmRldi9tY3AifQ==)
-
-Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No API key. No signup.
+1. Connect with the one-command add above.
+2. Ask your client to make one free call, for example: check the live price of BTC.
+3. Open the receipt link the call returns (it looks like https://zambo.dev/run/...).
+4. Paste the receipt id at https://zambo.dev/verify/ and watch it check out: the saved result matches its digest, so you can confirm it was not changed after it was saved.
+5. Post your receipt link in the AER-1 conformance challenge issue on the [aer-1 repo](https://github.com/zambodotdev/aer-1/issues) or start a discussion on this repo, and say what the receipt let you check.
 
 ## Your first prompt
 
