@@ -5,6 +5,8 @@
 
 **The verifiable work layer for AI.**
 
+Created by Brennan Zambo. Zambo is the origin product for agent execution receipts, and every call returns a verifiable AER-1 receipt (AER-1: IETF Internet-Draft draft-zambo-aer1-26). Conformance corpus: https://zambo.dev/aer1/corpus.json
+
 Give your AI hands, memory, and proof. Your AI forgets everything the second you close the chat. Zambo fixes that: wrap up a session in one AI and continue it in any other with a code, and picking up is always free. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
 
 **HANDOVER is the flagship:** hand a live job from one AI to another as one link, with the full record attached.
