@@ -15,7 +15,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Free tier:** every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
-**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 117,789 total, 3,449 issued on November 7, 2026. Live counts: https://zambo.dev/numbers/
+**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: 137,715 total and counting. Live counts: https://zambo.dev/numbers/
 
 **See a handover:** [watch the 61-second narrated walkthrough](https://rambozambodotdev.gitlab.io/aer1-hub/handover-templates.html), a real job filmed as it ran, from the first call to the check anyone can re-run.
 
@@ -73,7 +73,7 @@ Works in Claude, ChatGPT, Grok, Cursor, and any Streamable HTTP MCP client. No A
 2. Ask your client to make one free call, for example: check the live price of BTC.
 3. Open the receipt link the call returns (it looks like https://zambo.dev/run/...).
 4. Paste the receipt id at https://zambo.dev/verify/ and watch it check out: the saved result matches its digest, so you can confirm it was not changed after it was saved.
-5. Post your receipt link in the AER-1 conformance challenge issue on the [aer-1 repo](https://github.com/zambodotdev/aer-1/issues) or start a discussion on this repo, and say what the receipt let you check.
+5. Post your receipt link in the AER-1 conformance challenge issue on the [aer-1 repo](https://github.com/zambodotdev/aer-1/issues/4) or start a discussion on this repo, and say what the receipt let you check.
 
 ## Your first prompt
 
