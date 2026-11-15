@@ -1,23 +1,24 @@
 ---
 name: Bug report
-about: Something in this repo or the hosted service is not working as documented
-title: ""
+about: Something broke when you called Zambo
+title: "[bug] "
 labels: bug
 assignees: ""
 ---
 
 **What happened**
+A clear line or two on what broke.
 
+**The tool called**
+Tool name, and the arguments shape if you can share it (no secrets, no keys).
 
-**What you expected**
+**Receipt link, if any**
+https://zambo.dev/run/...
+If the call produced a receipt, paste the link. It lets us check the saved result exactly as it was saved.
 
+**Client + version**
+For example: Claude Code, Cursor, or your own MCP client, plus version.
 
-**How to reproduce**
-1.
-2.
-
-**Your setup**
-- MCP client and version:
-- How you connect (remote URL, npm, other):
-
-**Receipt URL (if the problem involves a tool call)**
+**Expected vs actual**
+Expected:
+Actual:
