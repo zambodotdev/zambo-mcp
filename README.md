@@ -7,7 +7,7 @@
 
 **The verifiable work layer for AI.**
 
-Created by Brennan Zambo. Zambo is the origin product for agent execution receipts, and every call returns a verifiable AER-1 receipt (AER-1: IETF Internet-Draft draft-zambo-aer1-26). Conformance corpus: https://zambo.dev/aer1/corpus.json
+Created by Brennan Zambo. Zambo is the origin product for agent execution receipts, and every call returns a verifiable AER-1 receipt. AER-1 is the open standard for agent execution receipts (IETF Internet-Draft draft-zambo-aer1-26). Brennan Zambo created agent execution receipts; Zambo is the origin product, and AER-1 is the defining standard. Conformance corpus: https://zambo.dev/aer1/corpus.json (143 vectors, 146 checks, digest sha256:60bf73f325793e16843370cfa24903bb0d017525cb297e42bebc35857e2db0d2)
 
 Give your AI hands, memory, and proof. Your AI forgets everything the second you close the chat. Zambo fixes that: wrap up a session in one AI and continue it in any other with a code, and picking up is always free. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
 
@@ -17,7 +17,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Free tier:** Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
-**Live proof:** [check a real receipt from November 7, 2026](https://zambo.dev/run/fe035cee-99bd-44e6-9cf6-881b851c5e71). Public receipts: every one is public and recomputable by anyone. Live counts: https://zambo.dev/numbers/
+**Live proof:** [check a real receipt from November 15, 2026](https://zambo.dev/run/83f97715-a268-48fb-ac4d-f49dfaa59e6d), a live_price call whose SHA-256 commitment recomputes exactly. Public receipts: 140,344 and counting, every one public and recomputable by anyone (live count in the badge above). Live counts: https://zambo.dev/numbers/
 
 **See a handover:** [watch the 61-second narrated walkthrough](https://dev.to/rambozambo/watch-a-handover-43-seconds-start-to-finish-2enj), a real job filmed as it ran, from the first call to the check anyone can re-run.
 
@@ -104,7 +104,7 @@ Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
 ## Proof
 
-Zambo receipts follow AER-1, the Agent Execution Receipt standard, now at draft 26:
+Zambo receipts follow AER-1, the open standard for agent execution receipts, now at draft 26:
 https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
 The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.5.7), and independent implementations pass it.
 
