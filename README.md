@@ -106,7 +106,7 @@ Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
 Zambo receipts follow AER-1, the open standard for agent execution receipts, now at draft 26:
 https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
-The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.5.7), and independent implementations pass it.
+The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.5.7). Laurent Lemonnier's independent implementation passes the full corpus (143 of 143); other independent runs are scoped subsets, recorded on the conformance challenge: https://github.com/zambodotdev/aer-1/issues/4
 
 ## Independent baseline
 
