@@ -124,3 +124,5 @@ every call returns a receipt. a receipt proves the saved bytes are unchanged. it
 ## If a call is refused
 
 The refusal itself carries that path: a refused call returns a Day Pass checkout link for your saved job, an x402 payment object, and the resume instruction. The job is saved server-side, not lost. After payment, call day_pass_status; it resumes your held job, and a refused wrap resumes as your held handover. Only repeat the refused call if it did not.
+
+That includes zambo_universal, the one-call router on this endpoint: if a zambo_universal call is refused, the refusal carries the Day Pass checkout link for the saved job and the resume instruction. After payment, call day_pass_status, then repeat only the refused call.
