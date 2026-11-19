@@ -18,7 +18,7 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Free tier:** Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
-**Live proof:** [check a real receipt from November 15, 2026](https://zambo.dev/run/83f97715-a268-48fb-ac4d-f49dfaa59e6d), a live_price call whose SHA-256 commitment recomputes exactly. Public receipts: every one public and recomputable by anyone (live count in the badge above). Live counts: https://zambo.dev/numbers/
+**Live proof, check it yourself:** one full job from November 19, 2026, five receipts and the handover that binds them. Start with the [BTC live_price receipt](https://zambo.dev/run/e53423b0-1de0-44da-b862-19e0eed7fb68) [![receipt check](https://zambo.dev/api/receipt/e53423b0-1de0-44da-b862-19e0eed7fb68/badge.svg?ref=badge)](https://zambo.dev/run/e53423b0-1de0-44da-b862-19e0eed7fb68), then open the [handover](https://zambo.dev/handover/97c9ef52-d3bd-44b3-bfeb-7f5886572f7f) holding all five steps: three live prices (BTC, ETH, SOL), one honestly recorded failure (a price call for a symbol that does not exist, saved as an error receipt, not a made-up number), and one lead search that found nothing and invented nothing. Every receipt's SHA-256 commitment recomputes exactly, by anyone, at https://zambo.dev/verify/. Public receipts: every one public and recomputable by anyone (live count in the badge above). Live counts: https://zambo.dev/numbers/
 
 **See a handover:** [watch the 61-second narrated walkthrough](https://dev.to/rambozambo/watch-a-handover-43-seconds-start-to-finish-2enj), a real job filmed as it ran, from the first call to the check anyone can re-run.
 
