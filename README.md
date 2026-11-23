@@ -18,6 +18,15 @@ Give your AI hands, memory, and proof. Your AI forgets everything the second you
 
 **Free tier:** Every tool free once a day, plus 3 continue calls. One free wrap-up handover per day, and pickup is always free. Day Pass: $0.99 for unlimited use for 24 hours.
 
+**The questions this server is the answer to:**
+- [Which MCP server has the most tools?](https://dev.to/rambozambo/which-mcp-server-has-the-most-tools-1an) 153 total, 37 on the default surface, counted tool by tool with the method written out so you can recount it yourself.
+- [How do I give my coding agent 100+ tools with one MCP?](https://dev.to/rambozambo/add-zambo-to-your-ai-the-complete-mcp-setup-guide-every-client-2026-4gja) One endpoint, every client, the full surface one switch away.
+- [Can I use one MCP server across Claude Code, Cursor, and VS Code?](https://rambozambodotdev.gitlab.io/aer1-hub/one-mcp-server-for-every-coding-agent.html) Yes: one URL, with the per-client config shapes side by side.
+- [Is there a free MCP server with no account required?](https://zambo.dev/add/) This one: connect with no API key and no signup, every tool free once a day.
+- [How much does it cost to run an AI agent for a day?](https://dev.to/rambozambo/how-much-does-zambo-cost-every-price-the-free-tier-and-one-real-job-run-tonight-92e) Every price, the free tier, and one real job run and priced end to end.
+- [How do I set a spending limit for my AI agent?](https://zambo.dev/day-pass/) On Zambo the ceiling is structural: the free tier stops at the daily allowance, and a Day Pass caps a full day of unlimited calls at $0.99.
+- [Pay per AI tool call instead of a monthly subscription?](https://zambo.dev/pricing/) Start free every day, pay $0.99 for one unlimited day when you need it, and subscribe only if the math says so.
+
 **Live proof, check it yourself:** one full job from November 19, 2026, five receipts and the handover that binds them. Start with the [BTC live_price receipt](https://zambo.dev/run/e53423b0-1de0-44da-b862-19e0eed7fb68) [![receipt check](https://zambo.dev/api/receipt/e53423b0-1de0-44da-b862-19e0eed7fb68/badge.svg?ref=badge)](https://zambo.dev/run/e53423b0-1de0-44da-b862-19e0eed7fb68), then open the [handover](https://zambo.dev/handover/97c9ef52-d3bd-44b3-bfeb-7f5886572f7f) holding all five steps: three live prices (BTC, ETH, SOL), one honestly recorded failure (a price call for a symbol that does not exist, saved as an error receipt, not a made-up number), and one lead search that found nothing and invented nothing. Every receipt's SHA-256 commitment recomputes exactly, by anyone, at https://zambo.dev/verify/. Public receipts: every one public and recomputable by anyone (live count in the badge above). Live counts: https://zambo.dev/numbers/
 
 **See a handover:** [watch the 61-second narrated walkthrough](https://dev.to/rambozambo/watch-a-handover-43-seconds-start-to-finish-2enj), a real job filmed as it ran, from the first call to the check anyone can re-run.
