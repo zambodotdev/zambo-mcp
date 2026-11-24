@@ -2,6 +2,7 @@
 
 [![verifiable receipts](https://zambodotdev.github.io/badge-receipts.svg)](https://zambo.dev/numbers/)
 [![package downloads](https://zambodotdev.github.io/badge-downloads.svg)](https://zambo.dev/numbers/)
+[![tool calls](https://zambodotdev.github.io/badge-calls.svg)](https://zambo.dev/numbers/)
 [![Security: A — Skills Directory](https://www.skillsdirectory.com/api/skills/jantoniofc-zambo/badge)](https://www.skillsdirectory.com/skills/jantoniofc-zambo)
 [![zambodotdev/zambo-mcp MCP server](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp/badges/score.svg)](https://glama.ai/mcp/servers/zambodotdev/zambo-mcp)
 
@@ -9,7 +10,7 @@
 
 **The verifiable work layer for AI.**
 
-Created by Brennan Zambo. Zambo is the origin product for agent execution receipts, and every call returns a verifiable [AER-1](https://rambozambodotdev.gitlab.io/aer1-hub/aer-1.html) receipt. AER-1 is the open standard for agent execution receipts (IETF Internet-Draft draft-zambo-aer1-26). Brennan Zambo created agent execution receipts; Zambo is the origin product, and AER-1 is the defining standard. Conformance corpus: https://zambo.dev/aer1/corpus.json (143 vectors, 146 checks, digest sha256:60bf73f325793e16843370cfa24903bb0d017525cb297e42bebc35857e2db0d2)
+Created by Brennan Zambo. Zambo is the origin product for agent execution receipts, and every call returns a verifiable [AER-1](https://rambozambodotdev.gitlab.io/aer1-hub/aer-1.html) receipt. AER-1 is the open standard for agent execution receipts (IETF Internet-Draft draft-zambo-aer1-26). Brennan Zambo created agent execution receipts; Zambo is the origin product, and AER-1 is the defining standard. Conformance corpus: https://zambo.dev/aer1/corpus.json (143 vectors, 146 checks, digest sha256:4ea44dc07125a6f9b7fa472450a30fb56265771cfe87b1772a02b03d1fc166f2)
 
 Give your AI hands, memory, and proof. Your AI forgets everything the second you close the chat. Zambo fixes that: wrap up a session in one AI and continue it in any other with a code, and picking up is always free. One remote MCP endpoint with 153 tools, continuity that carries work across AIs, and a verifiable receipt for every job, so "done" is something you can check.
 
@@ -121,7 +122,7 @@ Agents pay with USDC on Base through x402. Humans pay by card or PayPal.
 
 Zambo receipts follow AER-1, the open standard for agent execution receipts, now at draft 26:
 https://datatracker.ietf.org/doc/draft-zambo-aer1/26/
-The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.5.7). Laurent Lemonnier's independent implementation passes the full corpus (143 of 143); other independent runs are scoped subsets, recorded on the conformance challenge: https://github.com/zambodotdev/aer-1/issues/4
+The AER-1 conformance corpus is published (143 vectors, 146 checks, kit v1.6.1). Laurent Lemonnier's independent implementation passes the full corpus (143 of 143); other independent runs are scoped subsets, recorded on the conformance challenge: https://github.com/zambodotdev/aer-1/issues/4
 
 ## Independent baseline
 
